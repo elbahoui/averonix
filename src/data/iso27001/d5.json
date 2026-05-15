@@ -1,0 +1,586 @@
+{
+  "domain": {
+    "id": "D5",
+    "code": "D5",
+    "name": "Resources, Competence & Awareness",
+    "shortName": "Awareness",
+    "description": "Assesses whether the organization provides the resources, competence, awareness, training, and communication needed to support information security and ISMS readiness.",
+    "frameworkFocus": "ISO/IEC 27001 readiness",
+    "sourceNote": "Questions are independently authored for readiness assessment and do not reproduce ISO standard text.",
+    "defaultSource": "assessment",
+    "weight": 0.9
+  },
+  "companySectors": [
+    "saas",
+    "fintech",
+    "healthcare",
+    "ecommerce",
+    "education",
+    "telecom",
+    "professional_services",
+    "general_sme"
+  ],
+  "questionSchema": {
+    "id": "string",
+    "domainId": "D5",
+    "domainName": "Resources, Competence & Awareness",
+    "controlCode": "string",
+    "question": "string",
+    "helpText": "string",
+    "expectedEvidence": ["string"],
+    "severity": "low | medium | high | critical",
+    "weight": "number",
+    "appliesTo": "all | CompanySector[]",
+    "source": "assessment | agent | integration | combined"
+  },
+  "coreQuestions": [
+    {
+      "id": "D5-C01",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-C01",
+      "question": "Has your organization identified the resources needed to establish, operate, and improve its information security program?",
+      "helpText": "This checks whether security readiness has realistic support through people, tools, budget, time, external support, and management attention.",
+      "expectedEvidence": [
+        "Security resource plan",
+        "Budget or tooling plan",
+        "Security roadmap with resource needs",
+        "External support or consultant agreement"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D5-C02",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-C02",
+      "question": "Has your organization identified the competence needed for people whose work affects information security?",
+      "helpText": "This verifies whether the organization knows which skills are needed for IT administration, security operations, risk ownership, incident response, access management, and policy ownership.",
+      "expectedEvidence": [
+        "Security competence matrix",
+        "Role-based competence requirements",
+        "Job descriptions with security competence",
+        "Training needs assessment"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D5-C03",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-C03",
+      "question": "Does your organization provide security awareness or training to relevant employees and contractors?",
+      "helpText": "This checks whether people understand common risks, security rules, acceptable use, incident reporting, and their responsibilities.",
+      "expectedEvidence": [
+        "Security awareness training records",
+        "Training attendance list",
+        "Onboarding security training material",
+        "Phishing or awareness campaign records"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D5-C04",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-C04",
+      "question": "Are personnel aware of the information security policy and their individual responsibilities?",
+      "helpText": "This verifies whether employees and contractors know the rules they are expected to follow and understand how their actions affect security.",
+      "expectedEvidence": [
+        "Policy acknowledgement records",
+        "Employee security handbook",
+        "Onboarding checklist",
+        "Role-based responsibility communication"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D5-C05",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-C05",
+      "question": "Has the organization defined how information security communication is handled internally and externally?",
+      "helpText": "This checks whether the organization knows what to communicate, when to communicate, who communicates, and which channels are used for security topics.",
+      "expectedEvidence": [
+        "Security communication plan",
+        "Incident communication procedure",
+        "Internal security announcement records",
+        "External communication responsibility notes"
+      ],
+      "severity": "medium",
+      "weight": 1.0,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D5-C06",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-C06",
+      "question": "Does your organization keep evidence of competence, awareness, training, or communication activities?",
+      "helpText": "This verifies whether the organization can show evidence that people are trained, competent, and informed about security responsibilities.",
+      "expectedEvidence": [
+        "Training records",
+        "Certificates or competence evidence",
+        "Security awareness logs",
+        "Communication archive"
+      ],
+      "severity": "medium",
+      "weight": 1.0,
+      "appliesTo": "all",
+      "source": "assessment"
+    }
+  ],
+  "sectorQuestions": [
+    {
+      "id": "D5-SAAS-01",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-SAAS-01",
+      "question": "Do engineering, DevOps, and support teams receive security training relevant to SaaS product security and customer data protection?",
+      "helpText": "SaaS teams need awareness of secure development, production access, incident reporting, secrets handling, customer data protection, and support access rules.",
+      "expectedEvidence": [
+        "Secure development training records",
+        "DevOps security training material",
+        "Support team security instructions",
+        "Customer data handling training"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-SAAS-02",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-SAAS-02",
+      "question": "Are developers and technical staff competent in secure coding, cloud security basics, access management, and incident escalation?",
+      "helpText": "This checks whether the people building and operating the SaaS platform have the skills needed to reduce product and infrastructure security risks.",
+      "expectedEvidence": [
+        "Developer competence matrix",
+        "Secure coding training evidence",
+        "Cloud security training records",
+        "Incident escalation procedure training"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-SAAS-03",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-SAAS-03",
+      "question": "Are security communications integrated into engineering workflows such as release planning, incident reviews, and product updates?",
+      "helpText": "Security communication should reach the teams that make changes to the product, infrastructure, and customer-facing services.",
+      "expectedEvidence": [
+        "Security notes in release planning",
+        "Incident review communication",
+        "Engineering security announcements",
+        "Security updates in sprint or roadmap notes"
+      ],
+      "severity": "medium",
+      "weight": 1.0,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-FIN-01",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-FIN-01",
+      "question": "Do employees handling payments, transactions, customer onboarding, or fraud-related workflows receive relevant security training?",
+      "helpText": "Fintech teams should understand risks related to financial data, transaction integrity, fraud exposure, account compromise, and regulatory expectations.",
+      "expectedEvidence": [
+        "Payment security training records",
+        "Fraud awareness training material",
+        "Customer onboarding security guidance",
+        "Financial data handling instructions"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-FIN-02",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-FIN-02",
+      "question": "Are staff responsible for financial systems competent in access control, transaction security, audit trail handling, and incident escalation?",
+      "helpText": "This checks whether key personnel have the skills needed to operate and protect financial workflows and supporting systems.",
+      "expectedEvidence": [
+        "Financial system competence matrix",
+        "Access control training evidence",
+        "Audit trail handling guidance",
+        "Incident escalation training records"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-FIN-03",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-FIN-03",
+      "question": "Are security communications defined for financial incidents, fraud indicators, provider issues, and customer-impacting events?",
+      "helpText": "Fintech organizations need clear communication paths for events that may affect money movement, customer trust, and financial service continuity.",
+      "expectedEvidence": [
+        "Financial incident communication plan",
+        "Fraud escalation procedure",
+        "Provider issue communication records",
+        "Customer-impact event communication template"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-HEALTH-01",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-HEALTH-01",
+      "question": "Do clinical, administrative, and IT staff receive security awareness appropriate to patient information and healthcare operations?",
+      "helpText": "Healthcare personnel should understand patient information protection, account security, device use, confidentiality, and incident reporting.",
+      "expectedEvidence": [
+        "Healthcare security awareness records",
+        "Patient information handling training",
+        "Clinical staff security instructions",
+        "Administrative staff awareness material"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-HEALTH-02",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-HEALTH-02",
+      "question": "Are staff responsible for clinical systems and patient records competent in secure access, confidentiality, and incident escalation?",
+      "helpText": "This checks whether personnel operating sensitive healthcare systems have the competence needed to protect patient services and information.",
+      "expectedEvidence": [
+        "Clinical system competence matrix",
+        "Patient records access training",
+        "Confidentiality acknowledgement",
+        "Healthcare incident escalation training"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-HEALTH-03",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-HEALTH-03",
+      "question": "Are communication procedures defined for incidents affecting patient information, clinical availability, or external medical partners?",
+      "helpText": "Healthcare incidents can affect confidentiality and service continuity, so communication responsibilities and escalation paths should be clear.",
+      "expectedEvidence": [
+        "Healthcare incident communication procedure",
+        "Clinical availability escalation plan",
+        "Medical partner notification process",
+        "Patient information incident communication records"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-ECOM-01",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-ECOM-01",
+      "question": "Do store administrators, support, marketing, and fulfillment teams receive security awareness relevant to customer accounts and order information?",
+      "helpText": "E-commerce teams should understand customer information handling, account security, payment-related risks, fraud indicators, and safe use of store tools.",
+      "expectedEvidence": [
+        "E-commerce security awareness records",
+        "Support team security training",
+        "Store admin training material",
+        "Customer data handling instructions"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-ECOM-02",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-ECOM-02",
+      "question": "Are staff responsible for the online store competent in admin access management, payment-related workflows, and incident escalation?",
+      "helpText": "This checks whether personnel operating the e-commerce platform understand the controls needed to protect store operations and customer trust.",
+      "expectedEvidence": [
+        "Store admin competence evidence",
+        "Payment workflow training",
+        "Access management instructions",
+        "Incident escalation training"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-ECOM-03",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-ECOM-03",
+      "question": "Are communication procedures defined for store downtime, account compromise, fraud indicators, or customer-impacting security events?",
+      "helpText": "E-commerce incidents can quickly affect customer trust, so teams need clear internal and external communication paths.",
+      "expectedEvidence": [
+        "Store incident communication plan",
+        "Customer-impact communication template",
+        "Fraud escalation procedure",
+        "Support communication playbook"
+      ],
+      "severity": "medium",
+      "weight": 1.1,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-EDU-01",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-EDU-01",
+      "question": "Do teachers, administrative staff, and IT staff receive security awareness relevant to student records, exams, and learning platforms?",
+      "helpText": "Education staff should understand secure handling of student information, exam integrity, account security, cloud tools, and incident reporting.",
+      "expectedEvidence": [
+        "Education security awareness records",
+        "Student data handling training",
+        "Exam integrity awareness material",
+        "Learning platform security instructions"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-EDU-02",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-EDU-02",
+      "question": "Are staff responsible for student systems, exam platforms, and learning tools competent in secure access and incident escalation?",
+      "helpText": "This checks whether key staff have the competence needed to operate education platforms securely.",
+      "expectedEvidence": [
+        "Education system competence matrix",
+        "Exam platform access training",
+        "Learning tool admin training",
+        "Incident escalation training records"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-EDU-03",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-EDU-03",
+      "question": "Are communication procedures defined for student information incidents, platform downtime, or exam system issues?",
+      "helpText": "Education organizations need clear communication paths for incidents affecting students, teachers, parents, and administration.",
+      "expectedEvidence": [
+        "Student information incident communication plan",
+        "Platform downtime communication procedure",
+        "Exam issue escalation plan",
+        "Education stakeholder communication records"
+      ],
+      "severity": "medium",
+      "weight": 1.1,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-TEL-01",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-TEL-01",
+      "question": "Do NOC, support, field, maintenance, and IT teams receive security awareness relevant to network operations and customer connectivity?",
+      "helpText": "Telecom and network teams should understand secure access, configuration change risks, incident escalation, physical site risks, and provider dependencies.",
+      "expectedEvidence": [
+        "NOC/SOC security awareness records",
+        "Field team security training",
+        "Maintenance team security instructions",
+        "Network operations security material"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-TEL-02",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-TEL-02",
+      "question": "Are personnel responsible for network infrastructure competent in access control, configuration management, monitoring, and incident response?",
+      "helpText": "This checks whether network operations personnel have the competence needed to protect infrastructure and respond to security events.",
+      "expectedEvidence": [
+        "Network operations competence matrix",
+        "Configuration management training",
+        "Monitoring platform training",
+        "Incident response training records"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-TEL-03",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-TEL-03",
+      "question": "Are communication procedures defined for network outages, infrastructure incidents, upstream provider issues, and customer-impacting events?",
+      "helpText": "Telecom security communication should support fast escalation and clear coordination during operational and security incidents.",
+      "expectedEvidence": [
+        "Network incident communication plan",
+        "Outage escalation procedure",
+        "Provider issue communication records",
+        "Customer-impact event communication template"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-SERV-01",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-SERV-01",
+      "question": "Do consultants, contractors, freelancers, and project staff receive security awareness relevant to client confidentiality and project workspaces?",
+      "helpText": "Professional services teams should understand confidentiality, secure collaboration, client file handling, remote work, and access responsibilities.",
+      "expectedEvidence": [
+        "Consultant awareness records",
+        "Contractor security onboarding",
+        "Client confidentiality training",
+        "Project workspace security instructions"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-SERV-02",
+      "domainId": "D5",
+      "name": "Resources, Competence & Awareness",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-SERV-02",
+      "question": "Are staff handling client deliverables competent in secure file handling, access control, remote work security, and incident escalation?",
+      "helpText": "This checks whether people handling client work have the competence needed to protect confidential project information.",
+      "expectedEvidence": [
+        "Client file handling training",
+        "Remote work security training",
+        "Project access management instructions",
+        "Incident escalation training"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-SERV-03",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-SERV-03",
+      "question": "Are communication procedures defined for client confidentiality incidents, project access issues, or collaboration platform problems?",
+      "helpText": "Professional services organizations need clear communication for issues that could affect clients, contracts, and project delivery.",
+      "expectedEvidence": [
+        "Client incident communication procedure",
+        "Project access escalation plan",
+        "Collaboration platform issue process",
+        "Client notification template"
+      ],
+      "severity": "medium",
+      "weight": 1.0,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-SME-01",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-SME-01",
+      "question": "Do employees receive basic awareness on passwords, email threats, device security, backups, and incident reporting?",
+      "helpText": "For SMEs, awareness can start with simple and practical topics that reduce the most common security risks.",
+      "expectedEvidence": [
+        "Basic security awareness material",
+        "Employee training records",
+        "Security checklist for staff",
+        "Incident reporting instructions"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-SME-02",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-SME-02",
+      "question": "Is the person responsible for IT or security competent enough to manage accounts, backups, devices, updates, and provider coordination?",
+      "helpText": "This checks whether the responsible person, internal or external, has the practical competence needed to support basic security readiness.",
+      "expectedEvidence": [
+        "IT/security owner competence notes",
+        "Training certificates or experience evidence",
+        "External IT provider qualification",
+        "Operational checklist"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    },
+    {
+      "id": "D5-SME-03",
+      "domainId": "D5",
+      "domainName": "Resources, Competence & Awareness",
+      "controlCode": "D5-SME-03",
+      "question": "Does the company have a simple communication path for security issues, IT problems, suspicious emails, or lost devices?",
+      "helpText": "Small companies need a clear and simple way for people to report issues quickly.",
+      "expectedEvidence": [
+        "Security issue reporting instructions",
+        "IT support contact procedure",
+        "Lost device reporting process",
+        "Suspicious email reporting guidance"
+      ],
+      "severity": "medium",
+      "weight": 1.0,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    }
+  ],
+  "selectionLogic": {
+    "description": "For each company, return all core questions plus the sector-specific questions matching the company's sector.",
+    "expectedQuestionCountPerCompany": 9,
+    "pseudoCode": "questions = coreQuestions + sectorQuestions.filter(q => q.appliesTo.includes(company.sector))"
+  }
+}

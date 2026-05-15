@@ -1,0 +1,585 @@
+{
+  "domain": {
+    "id": "D3",
+    "code": "D3",
+    "name": "Risk Assessment & Risk Treatment",
+    "shortName": "Risk",
+    "description": "Assesses whether the organization has a defined, repeatable, and evidence-backed process for identifying, analysing, evaluating, treating, approving, and reviewing information security risks.",
+    "frameworkFocus": "ISO/IEC 27001 readiness",
+    "sourceNote": "Questions are independently authored for readiness assessment and do not reproduce ISO standard text.",
+    "defaultSource": "assessment",
+    "weight": 1.4
+  },
+  "companySectors": [
+    "saas",
+    "fintech",
+    "healthcare",
+    "ecommerce",
+    "education",
+    "telecom",
+    "professional_services",
+    "general_sme"
+  ],
+  "questionSchema": {
+    "id": "string",
+    "domainId": "D3",
+    "domainName": "Risk Assessment & Risk Treatment",
+    "controlCode": "string",
+    "question": "string",
+    "helpText": "string",
+    "expectedEvidence": ["string"],
+    "severity": "low | medium | high | critical",
+    "weight": "number",
+    "appliesTo": "all | CompanySector[]",
+    "source": "assessment | agent | integration | combined"
+  },
+  "coreQuestions": [
+    {
+      "id": "D3-C01",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-C01",
+      "question": "Has your organization defined a repeatable information security risk assessment process?",
+      "helpText": "This checks whether risk assessment is performed using a consistent method instead of informal judgement only.",
+      "expectedEvidence": [
+        "Risk assessment methodology",
+        "Risk assessment procedure",
+        "Risk scoring criteria",
+        "Risk assessment template"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D3-C02",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-C02",
+      "question": "Has your organization defined risk criteria, including how likelihood, impact, and risk acceptance are evaluated?",
+      "helpText": "This verifies whether the company can evaluate risks consistently and determine what level of risk is acceptable.",
+      "expectedEvidence": [
+        "Risk criteria document",
+        "Likelihood and impact scale",
+        "Risk acceptance criteria",
+        "Risk scoring matrix"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D3-C03",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-C03",
+      "question": "Has your organization identified information security risks within the ISMS scope?",
+      "helpText": "This checks whether the organization has identified risks affecting information assets, systems, services, people, suppliers, and operations within the defined scope.",
+      "expectedEvidence": [
+        "Information security risk register",
+        "Risk workshop output",
+        "Asset-risk mapping",
+        "Threat and vulnerability notes"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D3-C04",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-C04",
+      "question": "Are risk owners assigned for identified information security risks?",
+      "helpText": "Risks should have accountable owners who can make or escalate treatment and acceptance decisions.",
+      "expectedEvidence": [
+        "Risk register with owner column",
+        "Risk ownership matrix",
+        "Management assignment records",
+        "Risk review meeting notes"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D3-C05",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-C05",
+      "question": "Has your organization defined and tracked treatment actions for unacceptable information security risks?",
+      "helpText": "This checks whether risks are reduced, transferred, avoided, or accepted through planned actions rather than left unmanaged.",
+      "expectedEvidence": [
+        "Risk treatment plan",
+        "Treatment action tracker",
+        "Control implementation plan",
+        "Risk decision records"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D3-C06",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-C06",
+      "question": "Has management or the relevant risk owner approved residual risks after treatment decisions?",
+      "helpText": "This verifies whether remaining risk is consciously accepted by an accountable person rather than ignored.",
+      "expectedEvidence": [
+        "Residual risk approval records",
+        "Risk acceptance forms",
+        "Management approval notes",
+        "Risk treatment sign-off"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": "all",
+      "source": "assessment"
+    }
+  ],
+  "sectorQuestions": [
+    {
+      "id": "D3-SAAS-01",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-SAAS-01",
+      "question": "Has the organization assessed risks affecting the SaaS production environment, customer data, and platform availability?",
+      "helpText": "SaaS risk assessment should cover production cloud infrastructure, customer data exposure, downtime, misconfiguration, and service abuse.",
+      "expectedEvidence": [
+        "SaaS production risk register",
+        "Cloud risk assessment",
+        "Customer data exposure risk analysis",
+        "Availability risk review"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-SAAS-02",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-SAAS-02",
+      "question": "Are secure development, CI/CD, source code, and deployment risks included in the risk assessment?",
+      "helpText": "This checks whether the company assesses risks in software delivery, code repositories, secrets, build pipelines, and deployment processes.",
+      "expectedEvidence": [
+        "Secure development risk assessment",
+        "CI/CD risk review",
+        "Repository access risk review",
+        "Secrets management risk notes"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-SAAS-03",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-SAAS-03",
+      "question": "Are SaaS risk treatment actions prioritized based on customer impact, exploitability, and business criticality?",
+      "helpText": "This verifies whether the company prioritizes risk treatment based on realistic product and customer impact.",
+      "expectedEvidence": [
+        "Risk treatment prioritization list",
+        "Security roadmap",
+        "Product security backlog",
+        "Customer impact assessment"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-FIN-01",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-FIN-01",
+      "question": "Has the organization assessed risks affecting payments, transactions, customer onboarding, fraud exposure, and financial data integrity?",
+      "helpText": "Fintech risk assessment should cover the workflows and platforms that directly affect financial trust, transactions, and customer protection.",
+      "expectedEvidence": [
+        "Payment risk assessment",
+        "Transaction integrity risk register",
+        "Fraud risk assessment",
+        "Customer onboarding risk analysis"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-FIN-02",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-FIN-02",
+      "question": "Are risks from banking partners, payment providers, KYC providers, and financial APIs included in the risk register?",
+      "helpText": "Financial service dependencies can introduce operational, security, fraud, and compliance risks that should be assessed and treated.",
+      "expectedEvidence": [
+        "Third-party financial risk register",
+        "Payment provider risk review",
+        "Banking API dependency risk notes",
+        "KYC provider risk assessment"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-FIN-03",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-FIN-03",
+      "question": "Are high-risk financial security issues escalated to leadership with clear treatment or acceptance decisions?",
+      "helpText": "This checks whether financial security risks receive appropriate management visibility and decision-making.",
+      "expectedEvidence": [
+        "Leadership risk escalation records",
+        "Financial risk acceptance records",
+        "Risk treatment decision logs",
+        "Security steering committee notes"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-HEALTH-01",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-HEALTH-01",
+      "question": "Has the organization assessed risks affecting patient information, clinical systems, appointment systems, and healthcare service continuity?",
+      "helpText": "Healthcare risk assessment should consider confidentiality, integrity, and availability of systems that support patient services and clinical operations.",
+      "expectedEvidence": [
+        "Patient information risk register",
+        "Clinical system risk assessment",
+        "Healthcare service continuity risk notes",
+        "Appointment and billing system risk review"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-HEALTH-02",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-HEALTH-02",
+      "question": "Are risks from laboratories, pharmacies, insurance partners, external doctors, and medical service providers included in risk treatment planning?",
+      "helpText": "External medical partners can affect patient information, service continuity, and operational reliability.",
+      "expectedEvidence": [
+        "Medical partner risk assessment",
+        "External service dependency register",
+        "Data exchange risk review",
+        "Partner treatment actions"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-HEALTH-03",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-HEALTH-03",
+      "question": "Are treatment actions prioritized for risks that could affect patient confidentiality, clinical availability, or medical record integrity?",
+      "helpText": "This checks whether healthcare-related risks are prioritized according to patient impact and operational criticality.",
+      "expectedEvidence": [
+        "Healthcare risk treatment plan",
+        "Priority risk list",
+        "Clinical availability treatment actions",
+        "Medical record protection plan"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-ECOM-01",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-ECOM-01",
+      "question": "Has the organization assessed risks affecting the online store, customer accounts, payment flow, refunds, and order management?",
+      "helpText": "E-commerce risk assessment should include the systems and processes that support customer trust, purchases, payments, and fulfilment.",
+      "expectedEvidence": [
+        "E-commerce risk register",
+        "Customer account risk review",
+        "Payment flow risk assessment",
+        "Order management risk notes"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-ECOM-02",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-ECOM-02",
+      "question": "Are risks from payment gateways, delivery providers, marketplaces, marketing platforms, and analytics tools included in the risk register?",
+      "helpText": "Third-party e-commerce tools can create security, availability, fraud, and data exposure risks.",
+      "expectedEvidence": [
+        "E-commerce vendor risk register",
+        "Payment gateway risk review",
+        "Delivery provider dependency notes",
+        "Marketing and analytics platform risk assessment"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-ECOM-03",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-ECOM-03",
+      "question": "Are treatment actions defined for account compromise, checkout disruption, customer data exposure, and platform availability risks?",
+      "helpText": "This checks whether the organization has practical treatment actions for the most common e-commerce security risks.",
+      "expectedEvidence": [
+        "Account protection treatment plan",
+        "Checkout availability action plan",
+        "Customer data exposure mitigation plan",
+        "Platform availability risk treatment"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-EDU-01",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-EDU-01",
+      "question": "Has the organization assessed risks affecting student records, learning platforms, exam systems, communication tools, and administrative information?",
+      "helpText": "Education risk assessment should cover the systems that support teaching, learning, exams, administration, and communication.",
+      "expectedEvidence": [
+        "Education risk register",
+        "Student information risk review",
+        "Exam system risk assessment",
+        "Learning platform risk notes"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-EDU-02",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-EDU-02",
+      "question": "Are risks from external learning platforms, cloud storage, video meeting tools, and school management providers included in risk treatment planning?",
+      "helpText": "External platforms used for learning and administration can introduce security and availability risks.",
+      "expectedEvidence": [
+        "Education provider risk register",
+        "Cloud tool risk assessment",
+        "Video platform risk review",
+        "External learning platform treatment actions"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-EDU-03",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-EDU-03",
+      "question": "Are treatment actions defined for exam integrity, student record protection, platform downtime, and unauthorized access risks?",
+      "helpText": "This checks whether education-specific security risks are translated into concrete treatment actions.",
+      "expectedEvidence": [
+        "Exam integrity treatment plan",
+        "Student record protection plan",
+        "Access control improvement actions",
+        "Platform availability treatment notes"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-TEL-01",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-TEL-01",
+      "question": "Has the organization assessed risks affecting network availability, core infrastructure, monitoring systems, customer connectivity, and operational tools?",
+      "helpText": "Telecom and network operators should assess risks that could affect service continuity, infrastructure security, and customer connectivity.",
+      "expectedEvidence": [
+        "Network risk register",
+        "Infrastructure risk assessment",
+        "Monitoring platform risk review",
+        "Connectivity risk analysis"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-TEL-02",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-TEL-02",
+      "question": "Are risks from upstream providers, data centers, cloud platforms, tower or site providers, and maintenance teams included in risk treatment planning?",
+      "helpText": "Network services often depend on external providers whose risks should be visible and treated.",
+      "expectedEvidence": [
+        "Upstream provider risk review",
+        "Data center risk assessment",
+        "Maintenance provider risk register",
+        "Critical dependency treatment plan"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-TEL-03",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-TEL-03",
+      "question": "Are treatment actions prioritized for outages, unauthorized infrastructure access, configuration errors, and incident response delays?",
+      "helpText": "This checks whether telecom-specific risks are prioritized according to operational impact and service continuity.",
+      "expectedEvidence": [
+        "Outage risk treatment plan",
+        "Infrastructure access treatment actions",
+        "Configuration risk mitigation notes",
+        "Incident response improvement plan"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-SERV-01",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-SERV-01",
+      "question": "Has the organization assessed risks affecting client files, project workspaces, contracts, communications, and deliverables?",
+      "helpText": "Professional services firms should assess risks that could affect client confidentiality, project delivery, and contract obligations.",
+      "expectedEvidence": [
+        "Client information risk register",
+        "Project workspace risk assessment",
+        "Contract repository risk review",
+        "Deliverable handling risk notes"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-SERV-02",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-SERV-02",
+      "question": "Are risks from consultants, contractors, freelancers, remote work, and collaboration platforms included in the risk register?",
+      "helpText": "Professional services often involve external personnel and collaboration tools that can introduce access and confidentiality risks.",
+      "expectedEvidence": [
+        "Contractor risk register",
+        "Remote work risk assessment",
+        "Collaboration tool risk review",
+        "Project access risk notes"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-SERV-03",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-SERV-03",
+      "question": "Are treatment actions defined for client confidentiality breaches, unauthorized project access, and loss of deliverables?",
+      "helpText": "This checks whether client-facing security risks are translated into concrete treatment actions.",
+      "expectedEvidence": [
+        "Client confidentiality treatment plan",
+        "Project access improvement actions",
+        "Deliverable backup or protection plan",
+        "Contractual risk treatment notes"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-SME-01",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-SME-01",
+      "question": "Has the company identified the main information security risks affecting daily operations?",
+      "helpText": "For SMEs, risk assessment can start with practical risks such as account compromise, data loss, device failure, ransomware, email fraud, and service downtime.",
+      "expectedEvidence": [
+        "Simple risk register",
+        "Business-critical risk list",
+        "Risk workshop notes",
+        "IT provider risk review"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-SME-02",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-SME-02",
+      "question": "Has the company defined practical treatment actions for its highest information security risks?",
+      "helpText": "This checks whether the company has clear actions to reduce the risks that matter most, even if the process is simple.",
+      "expectedEvidence": [
+        "Risk treatment action list",
+        "Backup improvement plan",
+        "Access control improvement actions",
+        "Security improvement roadmap"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    },
+    {
+      "id": "D3-SME-03",
+      "domainId": "D3",
+      "domainName": "Risk Assessment & Risk Treatment",
+      "controlCode": "D3-SME-03",
+      "question": "If an external IT provider supports the company, are provider-related security risks reviewed and assigned to an owner?",
+      "helpText": "External IT support may create dependencies for backups, access, devices, email, and incident response. These risks should have an owner.",
+      "expectedEvidence": [
+        "IT provider risk notes",
+        "Provider responsibility matrix",
+        "Service dependency risk register",
+        "Provider review records"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    }
+  ],
+  "selectionLogic": {
+    "description": "For each company, return all core questions plus the sector-specific questions matching the company's sector.",
+    "expectedQuestionCountPerCompany": 9,
+    "pseudoCode": "questions = coreQuestions + sectorQuestions.filter(q => q.appliesTo.includes(company.sector))"
+  }
+}

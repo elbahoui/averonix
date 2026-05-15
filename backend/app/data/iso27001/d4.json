@@ -1,0 +1,585 @@
+{
+  "domain": {
+    "id": "D4",
+    "code": "D4",
+    "name": "Security Objectives & Planning",
+    "shortName": "Objectives",
+    "description": "Assesses whether the organization has defined information security objectives, assigned ownership, planned resources and timelines, monitored progress, and managed ISMS-related changes in a controlled way.",
+    "frameworkFocus": "ISO/IEC 27001 readiness",
+    "sourceNote": "Questions are independently authored for readiness assessment and do not reproduce ISO standard text.",
+    "defaultSource": "assessment",
+    "weight": 1.0
+  },
+  "companySectors": [
+    "saas",
+    "fintech",
+    "healthcare",
+    "ecommerce",
+    "education",
+    "telecom",
+    "professional_services",
+    "general_sme"
+  ],
+  "questionSchema": {
+    "id": "string",
+    "domainId": "D4",
+    "domainName": "Security Objectives & Planning",
+    "controlCode": "string",
+    "question": "string",
+    "helpText": "string",
+    "expectedEvidence": ["string"],
+    "severity": "low | medium | high | critical",
+    "weight": "number",
+    "appliesTo": "all | CompanySector[]",
+    "source": "assessment | agent | integration | combined"
+  },
+  "coreQuestions": [
+    {
+      "id": "D4-C01",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-C01",
+      "question": "Has your organization defined information security objectives that support business and ISMS goals?",
+      "helpText": "This checks whether security objectives are intentionally defined instead of relying only on informal improvement ideas.",
+      "expectedEvidence": [
+        "Information security objectives document",
+        "Security roadmap",
+        "ISMS planning document",
+        "Management-approved security goals"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D4-C02",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-C02",
+      "question": "Are information security objectives measurable or otherwise trackable?",
+      "helpText": "Security objectives should be clear enough to monitor progress, evaluate effectiveness, and identify delays or gaps.",
+      "expectedEvidence": [
+        "Security KPI list",
+        "Objective tracking dashboard",
+        "Target metrics or milestones",
+        "Progress reporting template"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D4-C03",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-C03",
+      "question": "Does each security objective have an owner, target date, required resources, and evaluation method?",
+      "helpText": "This verifies whether objectives are operationally planned with accountability, resources, timelines, and a way to evaluate results.",
+      "expectedEvidence": [
+        "Security objective action plan",
+        "Owner assignment list",
+        "Timeline or roadmap",
+        "Resource allocation notes"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D4-C04",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-C04",
+      "question": "Are security objectives reviewed and updated when risks, business priorities, or technology changes?",
+      "helpText": "Security objectives should remain aligned with the organization as risks, systems, suppliers, and priorities evolve.",
+      "expectedEvidence": [
+        "Objective review records",
+        "Updated security roadmap",
+        "Risk-driven objective updates",
+        "Management review notes"
+      ],
+      "severity": "medium",
+      "weight": 1.0,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D4-C05",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-C05",
+      "question": "Does your organization plan ISMS-related changes before implementing them?",
+      "helpText": "This checks whether changes affecting the ISMS are planned so that security, scope, responsibilities, resources, and evidence are not disrupted.",
+      "expectedEvidence": [
+        "Change planning records",
+        "ISMS change impact assessment",
+        "Change approval notes",
+        "Implementation plan for ISMS changes"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D4-C06",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-C06",
+      "question": "Is progress against security objectives reported to management or relevant decision makers?",
+      "helpText": "This verifies whether leadership receives visibility into security improvement progress, blockers, and decisions needed.",
+      "expectedEvidence": [
+        "Security progress reports",
+        "Management dashboard",
+        "Security steering meeting notes",
+        "Objective status review records"
+      ],
+      "severity": "medium",
+      "weight": 1.0,
+      "appliesTo": "all",
+      "source": "assessment"
+    }
+  ],
+  "sectorQuestions": [
+    {
+      "id": "D4-SAAS-01",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-SAAS-01",
+      "question": "Has the SaaS company defined security objectives for production reliability, secure development, and customer data protection?",
+      "helpText": "SaaS objectives should translate security readiness into product, engineering, platform, and customer trust improvements.",
+      "expectedEvidence": [
+        "SaaS security roadmap",
+        "Secure development objectives",
+        "Production reliability targets",
+        "Customer data protection goals"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-SAAS-02",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-SAAS-02",
+      "question": "Are security objectives integrated into engineering planning, product backlog, or platform roadmap?",
+      "helpText": "This checks whether security work is planned alongside product and engineering work rather than treated as separate or optional.",
+      "expectedEvidence": [
+        "Security backlog items",
+        "Product roadmap with security initiatives",
+        "Sprint or quarterly planning notes",
+        "Engineering security OKRs"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-SAAS-03",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-SAAS-03",
+      "question": "Are changes to production infrastructure, CI/CD, authentication, or customer-facing services planned with security impact in mind?",
+      "helpText": "This verifies whether major SaaS changes are assessed for security impact before implementation.",
+      "expectedEvidence": [
+        "Production change plan",
+        "CI/CD change review",
+        "Authentication change approval",
+        "Security impact notes for product changes"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-FIN-01",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-FIN-01",
+      "question": "Has the organization defined security objectives for payment integrity, transaction protection, fraud reduction, and financial platform resilience?",
+      "helpText": "Fintech security objectives should reflect financial trust, transaction security, service continuity, and partner requirements.",
+      "expectedEvidence": [
+        "Fintech security objectives",
+        "Fraud reduction targets",
+        "Payment integrity roadmap",
+        "Financial platform resilience plan"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-FIN-02",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-FIN-02",
+      "question": "Are security objectives aligned with banking, payment provider, regulatory, and contractual expectations?",
+      "helpText": "This checks whether external financial obligations influence security planning and prioritization.",
+      "expectedEvidence": [
+        "Objective mapping to external requirements",
+        "Banking partner requirement plan",
+        "Payment provider security roadmap",
+        "Contractual obligation tracking"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-FIN-03",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-FIN-03",
+      "question": "Are changes to payment flows, KYC workflows, fraud tooling, or financial APIs planned with security and risk impact reviewed?",
+      "helpText": "Financial workflow changes can create significant risk and should be planned with security impact in mind.",
+      "expectedEvidence": [
+        "Payment flow change review",
+        "KYC workflow security review",
+        "Financial API change approval",
+        "Fraud tooling change notes"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-HEALTH-01",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-HEALTH-01",
+      "question": "Has the organization defined security objectives for patient information protection, clinical system availability, and healthcare service continuity?",
+      "helpText": "Healthcare objectives should reflect confidentiality, availability, integrity, and continuity of patient-facing operations.",
+      "expectedEvidence": [
+        "Healthcare security objectives",
+        "Patient information protection plan",
+        "Clinical availability targets",
+        "Healthcare service continuity roadmap"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-HEALTH-02",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-HEALTH-02",
+      "question": "Are security objectives communicated to clinical, administrative, IT, and external healthcare service teams where relevant?",
+      "helpText": "Healthcare security objectives often require coordination across clinical, administrative, technical, and partner roles.",
+      "expectedEvidence": [
+        "Healthcare security communication records",
+        "Clinical staff security objectives",
+        "IT and admin team planning notes",
+        "Partner security expectation notes"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-HEALTH-03",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-HEALTH-03",
+      "question": "Are changes to clinical systems, patient records platforms, appointment systems, or medical partners planned with security impact reviewed?",
+      "helpText": "Changes affecting patient data or clinical operations should be planned and reviewed to avoid security and continuity gaps.",
+      "expectedEvidence": [
+        "Clinical system change review",
+        "Patient record platform change notes",
+        "Medical partner change assessment",
+        "Security impact review records"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-ECOM-01",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-ECOM-01",
+      "question": "Has the organization defined security objectives for customer accounts, checkout security, payment trust, and store availability?",
+      "helpText": "E-commerce objectives should focus on protecting customer trust, account security, payments, orders, and store continuity.",
+      "expectedEvidence": [
+        "E-commerce security objectives",
+        "Customer account protection roadmap",
+        "Checkout security improvement plan",
+        "Store availability targets"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-ECOM-02",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-ECOM-02",
+      "question": "Are security objectives included when planning changes to the online store, payment gateway, delivery integration, or marketing tools?",
+      "helpText": "This checks whether e-commerce platform and third-party changes are planned with security and customer trust in mind.",
+      "expectedEvidence": [
+        "Store change review",
+        "Payment gateway change notes",
+        "Delivery integration change plan",
+        "Marketing platform security review"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-ECOM-03",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-ECOM-03",
+      "question": "Are e-commerce security improvements prioritized based on customer impact, fraud risk, and operational dependency?",
+      "helpText": "This verifies whether security planning prioritizes what matters most to customer trust and business continuity.",
+      "expectedEvidence": [
+        "Prioritized e-commerce security roadmap",
+        "Fraud-related improvement plan",
+        "Customer impact prioritization notes",
+        "Operational dependency review"
+      ],
+      "severity": "medium",
+      "weight": 1.1,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-EDU-01",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-EDU-01",
+      "question": "Has the organization defined security objectives for student records, exam integrity, learning platforms, and administrative systems?",
+      "helpText": "Education security objectives should reflect protection of student information, exam trust, learning continuity, and school administration.",
+      "expectedEvidence": [
+        "Education security objectives",
+        "Student record protection plan",
+        "Exam integrity improvement roadmap",
+        "Learning platform availability targets"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-EDU-02",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-EDU-02",
+      "question": "Are security objectives communicated to teachers, administrative staff, IT staff, and external learning providers where relevant?",
+      "helpText": "This checks whether security planning reaches the roles that operate education systems and handle student information.",
+      "expectedEvidence": [
+        "Teacher security communication",
+        "Admin staff security planning notes",
+        "IT security objective tracking",
+        "Provider expectation notes"
+      ],
+      "severity": "medium",
+      "weight": 1.0,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-EDU-03",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-EDU-03",
+      "question": "Are changes to exam systems, learning platforms, cloud storage, or student information systems planned with security impact reviewed?",
+      "helpText": "Education technology changes can affect student information, exam integrity, and learning continuity.",
+      "expectedEvidence": [
+        "Exam platform change review",
+        "Learning platform change notes",
+        "Cloud storage change assessment",
+        "Student system security impact review"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-TEL-01",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-TEL-01",
+      "question": "Has the organization defined security objectives for network availability, infrastructure protection, monitoring, and incident response readiness?",
+      "helpText": "Telecom and network operators should align objectives with service continuity, operational security, monitoring, and response capabilities.",
+      "expectedEvidence": [
+        "Network security objectives",
+        "Infrastructure protection roadmap",
+        "Monitoring improvement plan",
+        "Incident response readiness objectives"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-TEL-02",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-TEL-02",
+      "question": "Are security objectives integrated into network operations, maintenance planning, infrastructure upgrades, and provider management?",
+      "helpText": "This checks whether security objectives are reflected in operational planning and infrastructure change planning.",
+      "expectedEvidence": [
+        "Network operations plan with security objectives",
+        "Maintenance security planning notes",
+        "Infrastructure upgrade security review",
+        "Provider management roadmap"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-TEL-03",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-TEL-03",
+      "question": "Are changes to routers, switches, firewalls, monitoring systems, and upstream connectivity planned with security impact reviewed?",
+      "helpText": "Network infrastructure changes can affect availability, access, segmentation, monitoring, and incident detection.",
+      "expectedEvidence": [
+        "Network change approval records",
+        "Firewall or router change review",
+        "Monitoring system change notes",
+        "Upstream connectivity change assessment"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-SERV-01",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-SERV-01",
+      "question": "Has the organization defined security objectives for client confidentiality, project workspaces, remote work, and deliverable protection?",
+      "helpText": "Professional services objectives should reflect client trust, confidentiality, access control, and secure project delivery.",
+      "expectedEvidence": [
+        "Client confidentiality objectives",
+        "Project workspace security roadmap",
+        "Remote work security objectives",
+        "Deliverable protection plan"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-SERV-02",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-SERV-02",
+      "question": "Are security objectives linked to client contractual expectations, confidentiality obligations, and project delivery requirements?",
+      "helpText": "This checks whether client-facing obligations influence the organization’s security planning.",
+      "expectedEvidence": [
+        "Client requirement mapping",
+        "Contractual security objective tracking",
+        "Project-specific security plan",
+        "Confidentiality obligation review"
+      ],
+      "severity": "medium",
+      "weight": 1.1,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-SERV-03",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-SERV-03",
+      "question": "Are changes to collaboration platforms, client folders, contractor access, or project tools planned with security impact reviewed?",
+      "helpText": "Changes to project tools and access models can affect client confidentiality and delivery integrity.",
+      "expectedEvidence": [
+        "Collaboration platform change review",
+        "Client folder access change notes",
+        "Contractor access change approval",
+        "Project tool security impact review"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-SME-01",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-SME-01",
+      "question": "Has the company defined practical security objectives for accounts, backups, devices, email, and critical business systems?",
+      "helpText": "For SMEs, security objectives should be practical, understandable, and connected to the systems that keep the company running.",
+      "expectedEvidence": [
+        "Basic security objectives list",
+        "Backup improvement plan",
+        "Account security roadmap",
+        "Device and email security plan"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-SME-02",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-SME-02",
+      "question": "Are security objectives realistic for the company’s size, budget, staff, and external IT support model?",
+      "helpText": "This checks whether objectives are achievable and matched to the company’s actual capacity.",
+      "expectedEvidence": [
+        "Security improvement roadmap",
+        "Budget or resource notes",
+        "External IT provider plan",
+        "Prioritized security action list"
+      ],
+      "severity": "medium",
+      "weight": 1.0,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    },
+    {
+      "id": "D4-SME-03",
+      "domainId": "D4",
+      "domainName": "Security Objectives & Planning",
+      "controlCode": "D4-SME-03",
+      "question": "Are major changes to tools, providers, email, devices, or business-critical systems planned with security impact considered?",
+      "helpText": "Even small companies should consider security impact when changing key tools, providers, accounts, or business systems.",
+      "expectedEvidence": [
+        "Tool change notes",
+        "Provider change review",
+        "Email or device change plan",
+        "Business system change approval"
+      ],
+      "severity": "medium",
+      "weight": 1.0,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    }
+  ],
+  "selectionLogic": {
+    "description": "For each company, return all core questions plus the sector-specific questions matching the company's sector.",
+    "expectedQuestionCountPerCompany": 9,
+    "pseudoCode": "questions = coreQuestions + sectorQuestions.filter(q => q.appliesTo.includes(company.sector))"
+  }
+}

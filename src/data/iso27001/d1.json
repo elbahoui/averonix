@@ -1,0 +1,584 @@
+{
+  "domain": {
+    "id": "D1",
+    "code": "D1",
+    "name": "Organization Context & ISMS Scope",
+    "shortName": "ISMS Scope",
+    "frameworkFocus": "ISO/IEC 27001 readiness",
+    "description": "Assesses business context, interested parties, ISMS boundaries, critical assets, external dependencies, and scope review practices.",
+    "sourceNote": "Independently authored readiness questions. This file does not reproduce ISO standard text.",
+    "weight": 1.1
+  },
+  "companySectors": [
+    "saas",
+    "fintech",
+    "healthcare",
+    "ecommerce",
+    "education",
+    "telecom",
+    "professional_services",
+    "general_sme"
+  ],
+  "questionSchema": {
+    "id": "string",
+    "domainId": "D1",
+    "domainName": "Organization Context & ISMS Scope",
+    "controlCode": "string",
+    "question": "string",
+    "helpText": "string",
+    "expectedEvidence": ["string"],
+    "severity": "low | medium | high | critical",
+    "weight": "number",
+    "appliesTo": "all | CompanySector[]",
+    "source": "assessment | agent | integration | combined"
+  },
+  "coreQuestions": [
+    {
+      "id": "D1-C01",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-C01",
+      "question": "Has your organization identified the internal and external factors that affect information security?",
+      "helpText": "This checks whether the company understands its business context, operating environment, technology dependencies, regulatory pressures, contractual obligations, and security expectations.",
+      "expectedEvidence": [
+        "Business context document",
+        "Internal and external issues list",
+        "Security context notes",
+        "Strategy or risk workshop notes"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D1-C02",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-C02",
+      "question": "Has your organization identified the interested parties relevant to information security?",
+      "helpText": "Interested parties may include customers, employees, regulators, suppliers, partners, auditors, investors, insurers, cloud providers, and external IT providers.",
+      "expectedEvidence": [
+        "Interested parties register",
+        "Customer security requirements",
+        "Regulatory or contractual obligations list",
+        "Supplier and partner requirements list"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D1-C03",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-C03",
+      "question": "Has your organization defined the scope of its information security management system?",
+      "helpText": "The ISMS scope should clearly describe the business units, systems, services, teams, locations, information assets, and activities included in the security readiness program.",
+      "expectedEvidence": [
+        "ISMS scope statement",
+        "Scope diagram",
+        "List of included systems, services, and locations",
+        "List of excluded areas with justification"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D1-C04",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-C04",
+      "question": "Does the ISMS scope clearly identify boundaries, interfaces, and dependencies with third parties or outsourced services?",
+      "helpText": "This verifies whether the organization understands what it controls directly and what depends on vendors, cloud platforms, subcontractors, hosting providers, or external IT support.",
+      "expectedEvidence": [
+        "Supplier dependency map",
+        "Cloud or hosting architecture diagram",
+        "Outsourced service list",
+        "Shared responsibility notes"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D1-C05",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-C05",
+      "question": "Has your organization identified the main information assets that fall within the ISMS scope?",
+      "helpText": "This includes systems, databases, cloud platforms, business applications, source code, devices, documents, customer data, internal records, and operational information.",
+      "expectedEvidence": [
+        "Information asset inventory",
+        "System or application inventory",
+        "Data ownership list",
+        "Critical business information list"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D1-C06",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-C06",
+      "question": "Is the ISMS scope reviewed when major organizational, technical, supplier, or business changes occur?",
+      "helpText": "The ISMS scope should be reviewed when the company launches new services, changes cloud platforms, adds suppliers, expands locations, changes teams, or changes its business model.",
+      "expectedEvidence": [
+        "Scope review history",
+        "Change management notes",
+        "Updated ISMS scope document",
+        "Management review or decision records"
+      ],
+      "severity": "medium",
+      "weight": 1.0,
+      "appliesTo": "all",
+      "source": "assessment"
+    }
+  ],
+  "sectorQuestions": [
+    {
+      "id": "D1-SAAS-01",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-SAAS-01",
+      "question": "Are the SaaS application, production environment, customer data flows, and supporting infrastructure included in the ISMS scope?",
+      "helpText": "For SaaS companies, the application, production cloud environment, customer data flows, and infrastructure services are usually central to the ISMS scope.",
+      "expectedEvidence": [
+        "SaaS architecture diagram",
+        "Production environment inventory",
+        "Customer data flow diagram",
+        "Cloud infrastructure inventory"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-SAAS-02",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-SAAS-02",
+      "question": "Does the ISMS scope clearly separate development, staging, and production environments?",
+      "helpText": "This checks whether the company understands the boundaries between development, staging, production, CI/CD, source code, and customer-facing systems.",
+      "expectedEvidence": [
+        "Environment separation diagram",
+        "Repository and CI/CD pipeline list",
+        "Access matrix for dev, staging, and production",
+        "Production deployment process notes"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-SAAS-03",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-SAAS-03",
+      "question": "Are all customer-facing services, APIs, dashboards, admin panels, and support tools included in the ISMS scope?",
+      "helpText": "Customer-facing and administrative interfaces should be clearly identified because they often create important security exposure and access risks.",
+      "expectedEvidence": [
+        "Public service inventory",
+        "API documentation",
+        "Admin panel access list",
+        "Support tool inventory"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-FIN-01",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-FIN-01",
+      "question": "Are payment, transaction, onboarding, fraud prevention, and financial data processing activities included in the ISMS scope?",
+      "helpText": "Financial services depend on critical workflows that should be clearly included in the security readiness scope.",
+      "expectedEvidence": [
+        "Payment flow diagram",
+        "Transaction processing map",
+        "Customer onboarding process map",
+        "Critical financial system inventory"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-FIN-02",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-FIN-02",
+      "question": "Has the organization identified banking, payment, regulatory, and contractual security requirements relevant to the ISMS scope?",
+      "helpText": "Fintech companies often have external security expectations from payment providers, banking partners, regulators, investors, and customers.",
+      "expectedEvidence": [
+        "Regulatory obligations register",
+        "Banking partner security requirements",
+        "Payment provider requirements",
+        "Contractual security clauses"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-FIN-03",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-FIN-03",
+      "question": "Are payment processors, banking APIs, KYC providers, fraud tools, and financial service providers identified as ISMS dependencies?",
+      "helpText": "This checks whether critical financial third-party dependencies are visible in the ISMS scope and dependency map.",
+      "expectedEvidence": [
+        "Third-party dependency map",
+        "Payment provider list",
+        "KYC provider documentation",
+        "Banking API provider list"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-HEALTH-01",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-HEALTH-01",
+      "question": "Are patient management systems, medical records, appointment systems, billing systems, and connected clinical tools included in the ISMS scope?",
+      "helpText": "Healthcare organizations rely on sensitive and operationally critical systems that should be clearly represented in the security scope.",
+      "expectedEvidence": [
+        "Clinical system inventory",
+        "Patient information system list",
+        "Medical records system documentation",
+        "Billing and appointment system inventory"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-HEALTH-02",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-HEALTH-02",
+      "question": "Does the ISMS scope identify where sensitive health information is stored, accessed, processed, or shared?",
+      "helpText": "This checks whether the organization understands the boundaries and flows of sensitive health information across systems, people, and partners.",
+      "expectedEvidence": [
+        "Health information map",
+        "Storage location list",
+        "Access matrix",
+        "Data sharing process documentation"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-HEALTH-03",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-HEALTH-03",
+      "question": "Are laboratories, pharmacies, insurance partners, external doctors, and medical service providers identified as ISMS dependencies?",
+      "helpText": "External medical partners can create information security dependencies that should be visible in the ISMS scope.",
+      "expectedEvidence": [
+        "Medical partner list",
+        "Data exchange agreements",
+        "Referral process documentation",
+        "External service provider list"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-ECOM-01",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-ECOM-01",
+      "question": "Are the online store, payment flow, order management system, customer accounts, and support tools included in the ISMS scope?",
+      "helpText": "E-commerce security scope should cover the systems and workflows that support sales, payments, customer accounts, and operations.",
+      "expectedEvidence": [
+        "E-commerce architecture diagram",
+        "Payment process map",
+        "Order management system list",
+        "Customer support tool inventory"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-ECOM-02",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-ECOM-02",
+      "question": "Does the ISMS scope include customer accounts, order history, shipping information, refunds, and support records?",
+      "helpText": "This checks whether the organization understands the key information handled across the e-commerce lifecycle.",
+      "expectedEvidence": [
+        "Customer data flow diagram",
+        "Order data inventory",
+        "Support platform list",
+        "Shipping provider integration list"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-ECOM-03",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-ECOM-03",
+      "question": "Are marketplace platforms, payment gateways, delivery providers, marketing tools, and analytics platforms identified as ISMS dependencies?",
+      "helpText": "This checks whether third-party platforms that support the online store are visible in the scope and dependency map.",
+      "expectedEvidence": [
+        "Marketplace integration list",
+        "Payment gateway list",
+        "Delivery provider list",
+        "Marketing and analytics tool inventory"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-EDU-01",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-EDU-01",
+      "question": "Are student records, learning platforms, attendance systems, exam systems, and communication tools included in the ISMS scope?",
+      "helpText": "Education organizations should clearly identify the platforms and records that support learning, administration, exams, and communication.",
+      "expectedEvidence": [
+        "Student system inventory",
+        "Learning management system documentation",
+        "Exam platform list",
+        "Attendance system documentation"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-EDU-02",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-EDU-02",
+      "question": "Does the ISMS scope include student, teacher, staff, exam, certificate, and administrative information?",
+      "helpText": "This checks whether the organization has visibility over the main categories of information it needs to protect.",
+      "expectedEvidence": [
+        "Education data inventory",
+        "Student information flow",
+        "Staff access matrix",
+        "Certificate and exam process documentation"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-EDU-03",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-EDU-03",
+      "question": "Are external learning platforms, cloud storage, video meeting tools, and school management providers identified as ISMS dependencies?",
+      "helpText": "This checks whether external platforms used for learning and administration are included in the dependency view.",
+      "expectedEvidence": [
+        "External learning platform list",
+        "Cloud storage usage list",
+        "Video meeting tool list",
+        "Provider agreements or service list"
+      ],
+      "severity": "medium",
+      "weight": 1.1,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-TEL-01",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-TEL-01",
+      "question": "Are core network systems, customer connectivity systems, monitoring platforms, routers, switches, firewalls, and operational tools included in the ISMS scope?",
+      "helpText": "Telecom and network operators should clearly define whether network infrastructure and operational platforms are within the security management scope.",
+      "expectedEvidence": [
+        "Network architecture diagram",
+        "Infrastructure inventory",
+        "Monitoring system list",
+        "Firewall, router, and switch inventory"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-TEL-02",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-TEL-02",
+      "question": "Does the ISMS scope include provisioning, support, incident handling, customer management, and network operations?",
+      "helpText": "Operational processes should be included when they affect the confidentiality, integrity, or availability of customer or network services.",
+      "expectedEvidence": [
+        "NOC or operations process documentation",
+        "Customer provisioning workflow",
+        "Incident handling process",
+        "Support platform inventory"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-TEL-03",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-TEL-03",
+      "question": "Are upstream providers, data centers, cloud platforms, tower or site providers, and external maintenance teams identified as ISMS dependencies?",
+      "helpText": "Telecom and network operations often depend on critical external providers that should be visible in the ISMS dependency map.",
+      "expectedEvidence": [
+        "Upstream provider list",
+        "Data center contracts",
+        "External maintenance provider list",
+        "Critical dependency map"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-SERV-01",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-SERV-01",
+      "question": "Are client files, project workspaces, communication platforms, contracts, and deliverables included in the ISMS scope?",
+      "helpText": "Professional services firms often handle client information across projects, documents, communication tools, and deliverables.",
+      "expectedEvidence": [
+        "Client project inventory",
+        "Document storage list",
+        "Collaboration tool list",
+        "Contract repository list"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-SERV-02",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-SERV-02",
+      "question": "Does the ISMS scope include consultants, freelancers, contractors, and temporary project members who access client information?",
+      "helpText": "This checks whether non-permanent personnel with access to client information are included in the security scope.",
+      "expectedEvidence": [
+        "User access list",
+        "Contractor register",
+        "NDA or confidentiality records",
+        "Offboarding records"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-SERV-03",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-SERV-03",
+      "question": "Are client confidentiality requirements, contractual security obligations, and project-specific security expectations identified as part of the ISMS context?",
+      "helpText": "This checks whether the company understands the security expectations created by client contracts and project obligations.",
+      "expectedEvidence": [
+        "Client security requirements",
+        "NDA templates",
+        "Contractual security clauses",
+        "Project risk notes"
+      ],
+      "severity": "medium",
+      "weight": 1.1,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-SME-01",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-SME-01",
+      "question": "Has the company identified the systems and information that are most critical to daily operations?",
+      "helpText": "For general SMEs, the first step is to identify the systems, information, tools, and processes that are essential to keep the business running.",
+      "expectedEvidence": [
+        "Critical system list",
+        "Business process list",
+        "Main software and tool inventory",
+        "Key information asset list"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-SME-02",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-SME-02",
+      "question": "Is it clear who is responsible for information security, IT administration, backups, access, and incident response?",
+      "helpText": "This checks whether security responsibility is assigned internally or through an external provider.",
+      "expectedEvidence": [
+        "Responsibility matrix",
+        "IT owner assignment",
+        "External IT provider agreement",
+        "Internal role description"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    },
+    {
+      "id": "D1-SME-03",
+      "domainId": "D1",
+      "domainName": "Organization Context & ISMS Scope",
+      "controlCode": "D1-SME-03",
+      "question": "If the company uses an external IT provider, is that provider included in the ISMS scope as a dependency?",
+      "helpText": "External IT providers often manage access, backups, devices, email, or networks, so they should be included as a dependency when relevant.",
+      "expectedEvidence": [
+        "IT provider contract",
+        "Support agreement",
+        "Provider access permissions list",
+        "Service scope document"
+      ],
+      "severity": "medium",
+      "weight": 1.0,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    }
+  ],
+  "selectionLogic": {
+    "description": "For each company, return all core questions plus the sector-specific questions matching the company's sector.",
+    "expectedQuestionCountPerCompany": 9,
+    "pseudoCode": "questions = coreQuestions + sectorQuestions.filter(q => q.appliesTo.includes(company.sector))"
+  }
+}

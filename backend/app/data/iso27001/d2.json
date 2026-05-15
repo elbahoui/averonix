@@ -1,0 +1,585 @@
+{
+  "domain": {
+    "id": "D2",
+    "code": "D2",
+    "name": "Leadership, Policy & Responsibilities",
+    "shortName": "Leadership",
+    "description": "Assesses whether top management demonstrates commitment to information security, whether security policy is established and communicated, and whether responsibilities and authorities are clearly assigned.",
+    "frameworkFocus": "ISO/IEC 27001 readiness",
+    "sourceNote": "Questions are independently authored for readiness assessment and do not reproduce ISO standard text.",
+    "defaultSource": "assessment",
+    "weight": 1.1
+  },
+  "companySectors": [
+    "saas",
+    "fintech",
+    "healthcare",
+    "ecommerce",
+    "education",
+    "telecom",
+    "professional_services",
+    "general_sme"
+  ],
+  "questionSchema": {
+    "id": "string",
+    "domainId": "D2",
+    "domainName": "Leadership, Policy & Responsibilities",
+    "controlCode": "string",
+    "question": "string",
+    "helpText": "string",
+    "expectedEvidence": ["string"],
+    "severity": "low | medium | high | critical",
+    "weight": "number",
+    "appliesTo": "all | CompanySector[]",
+    "source": "assessment | agent | integration | combined"
+  },
+  "coreQuestions": [
+    {
+      "id": "D2-C01",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-C01",
+      "question": "Has top management formally assigned ownership for information security and ISMS readiness?",
+      "helpText": "This checks whether leadership has clearly identified who owns information security, who coordinates ISMS readiness, and who reports progress to management.",
+      "expectedEvidence": [
+        "Information security owner assignment",
+        "ISMS responsibility matrix",
+        "Management meeting notes",
+        "Security governance charter"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D2-C02",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-C02",
+      "question": "Has the organization established an information security policy approved by management?",
+      "helpText": "This verifies whether the organization has a formal information security policy that reflects its business context, security expectations, and commitment to improvement.",
+      "expectedEvidence": [
+        "Approved information security policy",
+        "Policy approval record",
+        "Policy version history",
+        "Management sign-off"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D2-C03",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-C03",
+      "question": "Is the information security policy communicated to relevant employees, contractors, and interested parties?",
+      "helpText": "A policy is only useful if relevant people know it exists, understand their responsibilities, and can access it when needed.",
+      "expectedEvidence": [
+        "Policy communication record",
+        "Employee acknowledgement records",
+        "Internal policy portal or shared folder",
+        "Onboarding or awareness material"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D2-C04",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-C04",
+      "question": "Are information security roles, responsibilities, and authorities clearly defined and communicated?",
+      "helpText": "This checks whether key roles such as security owner, IT administrator, system owner, risk owner, incident responder, and policy approver are clearly assigned.",
+      "expectedEvidence": [
+        "Security roles and responsibilities matrix",
+        "Job descriptions with security responsibilities",
+        "RACI matrix",
+        "Internal communication records"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D2-C05",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-C05",
+      "question": "Does management review information security performance, risks, and readiness progress on a planned basis?",
+      "helpText": "This checks whether information security is treated as a management responsibility rather than only a technical task.",
+      "expectedEvidence": [
+        "Management review agenda",
+        "Security steering committee notes",
+        "Risk review records",
+        "Security KPI or readiness progress report"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D2-C06",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-C06",
+      "question": "Has the organization assigned responsibility for reporting ISMS performance and readiness status to management?",
+      "helpText": "This checks whether there is a clear reporting path for security performance, readiness gaps, risk decisions, and improvement actions.",
+      "expectedEvidence": [
+        "ISMS reporting responsibility assignment",
+        "Security dashboard or report template",
+        "Management reporting schedule",
+        "Security performance review notes"
+      ],
+      "severity": "medium",
+      "weight": 1.0,
+      "appliesTo": "all",
+      "source": "assessment"
+    }
+  ],
+  "sectorQuestions": [
+    {
+      "id": "D2-SAAS-01",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-SAAS-01",
+      "question": "Has leadership assigned clear security ownership for the SaaS product, production environment, and customer-facing services?",
+      "helpText": "SaaS companies need clear ownership for production security, customer data protection, platform reliability, and secure development practices.",
+      "expectedEvidence": [
+        "Product security owner assignment",
+        "Production environment ownership matrix",
+        "Engineering security responsibilities",
+        "SaaS security governance notes"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-SAAS-02",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-SAAS-02",
+      "question": "Are engineering, DevOps, support, and customer success teams aware of their information security responsibilities?",
+      "helpText": "SaaS security depends on multiple teams, not only IT. Each team should understand its role in protecting customer-facing services and information.",
+      "expectedEvidence": [
+        "Team-specific security responsibilities",
+        "Engineering onboarding checklist",
+        "Support access rules",
+        "DevOps security procedures"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-SAAS-03",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-SAAS-03",
+      "question": "Does management review SaaS security risks such as platform availability, access control, customer data exposure, and secure development?",
+      "helpText": "This checks whether SaaS-specific risks are visible to management and included in readiness discussions.",
+      "expectedEvidence": [
+        "SaaS risk review notes",
+        "Security roadmap",
+        "Production incident review records",
+        "Secure development improvement plan"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-FIN-01",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-FIN-01",
+      "question": "Has management assigned accountability for financial system security, payment workflows, and transaction-related risks?",
+      "helpText": "Fintech organizations should clearly assign ownership for the security of payment flows, financial platforms, transaction data, and fraud-related controls.",
+      "expectedEvidence": [
+        "Financial security responsibility matrix",
+        "Payment process owner assignment",
+        "Transaction risk owner list",
+        "Security governance meeting notes"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-FIN-02",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-FIN-02",
+      "question": "Are regulatory, banking, payment provider, and contractual security responsibilities assigned to specific owners?",
+      "helpText": "Security obligations from banking partners, payment providers, regulators, and contracts should have clear internal owners.",
+      "expectedEvidence": [
+        "Obligation owner register",
+        "Banking or payment security requirement owner list",
+        "Compliance responsibility matrix",
+        "Contractual security tracking document"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-FIN-03",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-FIN-03",
+      "question": "Does leadership review security risks affecting payment integrity, fraud exposure, customer trust, and service continuity?",
+      "helpText": "This checks whether leadership actively oversees the risks that can affect financial trust, service continuity, and transaction security.",
+      "expectedEvidence": [
+        "Financial risk review records",
+        "Fraud and security steering notes",
+        "Payment incident review",
+        "Risk treatment decisions"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-HEALTH-01",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-HEALTH-01",
+      "question": "Has leadership assigned responsibility for protecting clinical systems, patient records, and healthcare operations?",
+      "helpText": "Healthcare organizations should clearly assign security responsibility for systems that support patient care, clinical operations, and medical records.",
+      "expectedEvidence": [
+        "Clinical system ownership matrix",
+        "Patient information security responsibility assignment",
+        "Healthcare operations security role list",
+        "Management approval records"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-HEALTH-02",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-HEALTH-02",
+      "question": "Are doctors, administrative staff, technicians, and external medical partners aware of their security responsibilities?",
+      "helpText": "Healthcare security often involves clinical, administrative, and external actors. Responsibilities should be communicated according to role and access.",
+      "expectedEvidence": [
+        "Role-based security instructions",
+        "Staff acknowledgement records",
+        "Partner responsibility notes",
+        "Security awareness material for clinical staff"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-HEALTH-03",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-HEALTH-03",
+      "question": "Does management review security risks that could affect patient confidentiality, clinical availability, and service continuity?",
+      "helpText": "This checks whether healthcare-specific security risks are visible to management and reviewed as part of operational readiness.",
+      "expectedEvidence": [
+        "Healthcare security risk review",
+        "Clinical system availability review",
+        "Patient information risk notes",
+        "Service continuity meeting records"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-ECOM-01",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-ECOM-01",
+      "question": "Has management assigned security responsibility for the online store, payment flow, customer accounts, and order management systems?",
+      "helpText": "E-commerce security requires clear ownership for the platforms and workflows that support sales, customer trust, and payment processing.",
+      "expectedEvidence": [
+        "E-commerce platform owner assignment",
+        "Payment flow responsibility matrix",
+        "Customer account security owner",
+        "Order management system owner"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-ECOM-02",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-ECOM-02",
+      "question": "Are support, marketing, fulfillment, and store administration teams aware of their security responsibilities?",
+      "helpText": "Customer, order, and support information may be handled by several teams. Each team should understand acceptable use, access, and security responsibilities.",
+      "expectedEvidence": [
+        "Team responsibility matrix",
+        "Support team security instructions",
+        "Store admin access rules",
+        "Marketing tool usage policy"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-ECOM-03",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-ECOM-03",
+      "question": "Does leadership review security risks affecting customer accounts, payment trust, platform availability, and third-party e-commerce tools?",
+      "helpText": "This checks whether e-commerce risks are reviewed by management, including availability, account compromise, payment-related risks, and supplier dependencies.",
+      "expectedEvidence": [
+        "E-commerce risk review notes",
+        "Customer account security review",
+        "Payment trust risk notes",
+        "Third-party platform review"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-EDU-01",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-EDU-01",
+      "question": "Has leadership assigned responsibility for protecting student information systems, learning platforms, exam systems, and administrative records?",
+      "helpText": "Education organizations should clearly assign responsibility for systems that support learning, exams, communication, and administration.",
+      "expectedEvidence": [
+        "Education system ownership matrix",
+        "Student information security owner",
+        "Exam platform responsibility assignment",
+        "Administrative records owner list"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-EDU-02",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-EDU-02",
+      "question": "Are teachers, administrative staff, IT staff, and external learning providers aware of their security responsibilities?",
+      "helpText": "Education security depends on many roles with different access levels, including teachers, administrators, IT staff, and external providers.",
+      "expectedEvidence": [
+        "Role-based security instructions",
+        "Staff acknowledgement records",
+        "External provider responsibility notes",
+        "Awareness material for education staff"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-EDU-03",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-EDU-03",
+      "question": "Does management review security risks affecting student records, exam integrity, platform availability, and online learning services?",
+      "helpText": "This checks whether education-specific security risks are escalated and reviewed by leadership.",
+      "expectedEvidence": [
+        "Student data risk review",
+        "Exam system risk review",
+        "Learning platform availability notes",
+        "Management meeting records"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-TEL-01",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-TEL-01",
+      "question": "Has leadership assigned responsibility for network infrastructure security, monitoring platforms, customer connectivity, and operational systems?",
+      "helpText": "Telecom and network operators need clear ownership for infrastructure security, operations, monitoring, customer connectivity, and external dependencies.",
+      "expectedEvidence": [
+        "Network security owner assignment",
+        "NOC/SOC responsibility matrix",
+        "Operational system ownership list",
+        "Infrastructure governance notes"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-TEL-02",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-TEL-02",
+      "question": "Are NOC, support, field, maintenance, and external provider teams aware of their security responsibilities?",
+      "helpText": "Network operations often involve multiple teams and providers. Each should understand responsibilities for access, change, escalation, and incident reporting.",
+      "expectedEvidence": [
+        "NOC/SOC responsibility matrix",
+        "Field team security instructions",
+        "External maintenance responsibility notes",
+        "Provider access responsibility list"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-TEL-03",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-TEL-03",
+      "question": "Does management review security risks affecting network availability, infrastructure access, incident response, and upstream provider dependencies?",
+      "helpText": "This checks whether leadership reviews risks that can affect service availability, customer connectivity, infrastructure access, and operational resilience.",
+      "expectedEvidence": [
+        "Network risk review records",
+        "Availability or outage review notes",
+        "Incident response governance records",
+        "Upstream dependency review"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-SERV-01",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-SERV-01",
+      "question": "Has management assigned responsibility for protecting client files, project workspaces, contracts, communications, and deliverables?",
+      "helpText": "Professional services firms should clearly assign responsibility for protecting client information across projects, workspaces, and deliverables.",
+      "expectedEvidence": [
+        "Client information responsibility matrix",
+        "Project workspace owner list",
+        "Contract repository owner",
+        "Client deliverable handling procedure"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-SERV-02",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-SERV-02",
+      "question": "Are consultants, contractors, freelancers, and project staff aware of their confidentiality and information security responsibilities?",
+      "helpText": "Professional services often involve temporary or external workers who may access client information. Their responsibilities should be clearly communicated.",
+      "expectedEvidence": [
+        "Consultant security responsibilities",
+        "Contractor onboarding checklist",
+        "NDA or confidentiality acknowledgement records",
+        "Project access rules"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-SERV-03",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-SERV-03",
+      "question": "Does leadership review security risks related to client confidentiality, project delivery, remote work, and collaboration platforms?",
+      "helpText": "This checks whether client-facing and project-specific security risks are reviewed by leadership.",
+      "expectedEvidence": [
+        "Client confidentiality risk review",
+        "Project risk notes",
+        "Remote work security review",
+        "Collaboration platform access review"
+      ],
+      "severity": "medium",
+      "weight": 1.1,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-SME-01",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-SME-01",
+      "question": "Has the company clearly assigned who is responsible for information security, IT administration, access control, backups, and incident response?",
+      "helpText": "For SMEs, security ownership may be internal or outsourced, but it should be clear and understood.",
+      "expectedEvidence": [
+        "Security responsibility assignment",
+        "IT administrator assignment",
+        "Backup owner assignment",
+        "Incident response owner assignment"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-SME-02",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-SME-02",
+      "question": "Has management approved basic security rules for passwords, email, devices, backups, and acceptable use?",
+      "helpText": "SMEs should have simple but approved security rules that employees can understand and follow.",
+      "expectedEvidence": [
+        "Basic security policy",
+        "Password and account rules",
+        "Device usage rules",
+        "Backup procedure"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    },
+    {
+      "id": "D2-SME-03",
+      "domainId": "D2",
+      "domainName": "Leadership, Policy & Responsibilities",
+      "controlCode": "D2-SME-03",
+      "question": "If the company uses an external IT provider, are responsibilities between the company and the provider clearly defined?",
+      "helpText": "External IT providers may manage systems, users, devices, backups, and incidents. Responsibilities should not be ambiguous.",
+      "expectedEvidence": [
+        "IT provider contract",
+        "Service responsibility matrix",
+        "Support agreement",
+        "Provider access and escalation rules"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    }
+  ],
+  "selectionLogic": {
+    "description": "For each company, return all core questions plus the sector-specific questions matching the company's sector.",
+    "expectedQuestionCountPerCompany": 9,
+    "pseudoCode": "questions = coreQuestions + sectorQuestions.filter(q => q.appliesTo.includes(company.sector))"
+  }
+}

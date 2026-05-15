@@ -1,0 +1,585 @@
+{
+  "domain": {
+    "id": "D6",
+    "code": "D6",
+    "name": "Documented Information & Operational Control",
+    "shortName": "Documentation",
+    "description": "Assesses whether the organization creates, controls, protects, updates, and uses documented information needed for information security, while planning and controlling operational security processes and changes.",
+    "frameworkFocus": "ISO/IEC 27001 readiness",
+    "sourceNote": "Questions are independently authored for readiness assessment and do not reproduce ISO standard text.",
+    "defaultSource": "assessment",
+    "weight": 1.1
+  },
+  "companySectors": [
+    "saas",
+    "fintech",
+    "healthcare",
+    "ecommerce",
+    "education",
+    "telecom",
+    "professional_services",
+    "general_sme"
+  ],
+  "questionSchema": {
+    "id": "string",
+    "domainId": "D6",
+    "domainName": "Documented Information & Operational Control",
+    "controlCode": "string",
+    "question": "string",
+    "helpText": "string",
+    "expectedEvidence": ["string"],
+    "severity": "low | medium | high | critical",
+    "weight": "number",
+    "appliesTo": "all | CompanySector[]",
+    "source": "assessment | agent | integration | combined"
+  },
+  "coreQuestions": [
+    {
+      "id": "D6-C01",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-C01",
+      "question": "Has your organization identified the documented information needed to support its information security program?",
+      "helpText": "This checks whether the organization knows which policies, procedures, records, registers, plans, and evidence are needed for security readiness.",
+      "expectedEvidence": [
+        "Documented information register",
+        "Policy and procedure inventory",
+        "Evidence library index",
+        "ISMS documentation list"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D6-C02",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-C02",
+      "question": "Are security documents created, reviewed, approved, and version-controlled before use?",
+      "helpText": "This verifies whether important security documents are controlled so that people use approved and current versions.",
+      "expectedEvidence": [
+        "Document control procedure",
+        "Document approval records",
+        "Version history",
+        "Review and approval workflow"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D6-C03",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-C03",
+      "question": "Is documented information protected from unauthorized access, loss, improper modification, or accidental deletion?",
+      "helpText": "Security documentation and evidence should be accessible to authorized people while protected against unauthorized changes, loss, or disclosure.",
+      "expectedEvidence": [
+        "Document access control list",
+        "Document repository permissions",
+        "Backup or retention settings",
+        "Change history or audit trail"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D6-C04",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-C04",
+      "question": "Are operational security processes planned, documented, and performed according to defined criteria?",
+      "helpText": "This checks whether recurring security activities such as access reviews, backup checks, vulnerability handling, incident escalation, and supplier reviews are planned and controlled.",
+      "expectedEvidence": [
+        "Operational security procedure",
+        "Security operations checklist",
+        "Access review procedure",
+        "Backup, vulnerability, or incident process records"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D6-C05",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-C05",
+      "question": "Are changes that affect information security planned, reviewed, approved, and recorded?",
+      "helpText": "This verifies whether security-relevant changes are controlled to reduce unintended impact on systems, access, data, suppliers, or operations.",
+      "expectedEvidence": [
+        "Change management procedure",
+        "Change approval records",
+        "Security impact assessments",
+        "Change implementation logs"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D6-C06",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-C06",
+      "question": "Are externally provided processes, products, or services that affect information security controlled and monitored?",
+      "helpText": "This checks whether outsourced services, cloud platforms, IT providers, and other external services are managed as part of operational security.",
+      "expectedEvidence": [
+        "External service inventory",
+        "Supplier monitoring records",
+        "Service review notes",
+        "Outsourced process control evidence"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    }
+  ],
+  "sectorQuestions": [
+    {
+      "id": "D6-SAAS-01",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-SAAS-01",
+      "question": "Are SaaS operational procedures documented for production access, deployment, incident handling, and customer-impacting changes?",
+      "helpText": "SaaS operations should be supported by clear procedures for production access, releases, incidents, and changes that may affect customers.",
+      "expectedEvidence": [
+        "Production access procedure",
+        "Deployment runbook",
+        "SaaS incident response playbook",
+        "Customer-impacting change procedure"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-SAAS-02",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-SAAS-02",
+      "question": "Are release notes, deployment approvals, rollback plans, and production change records maintained?",
+      "helpText": "This checks whether the organization keeps evidence that production changes are planned, traceable, and reversible when needed.",
+      "expectedEvidence": [
+        "Release notes",
+        "Deployment approval records",
+        "Rollback plan",
+        "Production change log"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-SAAS-03",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-SAAS-03",
+      "question": "Are customer-facing service dependencies, uptime procedures, and support escalation paths documented and reviewed?",
+      "helpText": "This verifies whether the SaaS team maintains operational documentation for the services customers rely on.",
+      "expectedEvidence": [
+        "Service dependency map",
+        "Uptime or availability procedure",
+        "Support escalation path",
+        "Service review records"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-FIN-01",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-FIN-01",
+      "question": "Are operational procedures documented for payment processing, transaction handling, fraud escalation, and financial system changes?",
+      "helpText": "Fintech operations need documented procedures for sensitive financial workflows and changes that affect transaction integrity or customer trust.",
+      "expectedEvidence": [
+        "Payment operation procedure",
+        "Transaction handling runbook",
+        "Fraud escalation process",
+        "Financial system change records"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-FIN-02",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-FIN-02",
+      "question": "Are financial workflow records, audit trails, approvals, and exception handling records protected and retained?",
+      "helpText": "This checks whether important financial operational evidence is retained and protected against loss, tampering, or unauthorized access.",
+      "expectedEvidence": [
+        "Audit trail retention settings",
+        "Approval records",
+        "Exception handling logs",
+        "Financial record protection procedure"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-FIN-03",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-FIN-03",
+      "question": "Are banking, payment provider, KYC, and financial API operational dependencies documented and reviewed?",
+      "helpText": "This verifies whether the organization controls and monitors external services that support financial operations.",
+      "expectedEvidence": [
+        "Financial dependency register",
+        "Payment provider review records",
+        "KYC provider operational review",
+        "Financial API dependency documentation"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-HEALTH-01",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-HEALTH-01",
+      "question": "Are operational procedures documented for clinical systems, patient records access, appointment systems, and healthcare incident handling?",
+      "helpText": "Healthcare operations should be documented to support confidentiality, availability, continuity, and safe handling of patient-related systems.",
+      "expectedEvidence": [
+        "Clinical system procedure",
+        "Patient record access procedure",
+        "Appointment system operation notes",
+        "Healthcare incident handling playbook"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-HEALTH-02",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-HEALTH-02",
+      "question": "Are records related to patient information access, clinical system changes, and incident handling protected and retained?",
+      "helpText": "This checks whether healthcare operational evidence is protected and available when needed for review or investigation.",
+      "expectedEvidence": [
+        "Patient record access logs",
+        "Clinical system change records",
+        "Incident handling records",
+        "Record retention procedure"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-HEALTH-03",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-HEALTH-03",
+      "question": "Are external medical partners, laboratories, pharmacies, and healthcare service dependencies documented and operationally controlled?",
+      "helpText": "This verifies whether medical partner dependencies are visible and reviewed as part of operational security.",
+      "expectedEvidence": [
+        "Medical partner dependency register",
+        "Laboratory or pharmacy service records",
+        "Partner review notes",
+        "External healthcare service agreement"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-ECOM-01",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-ECOM-01",
+      "question": "Are operational procedures documented for the online store, checkout flow, order handling, refunds, and support processes?",
+      "helpText": "E-commerce operations should be documented to protect customer trust, payment-related workflows, and order processing.",
+      "expectedEvidence": [
+        "Online store operation procedure",
+        "Checkout flow documentation",
+        "Order handling procedure",
+        "Refund and support process records"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-ECOM-02",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-ECOM-02",
+      "question": "Are customer account, order, payment-related, and support records protected and retained according to operational needs?",
+      "helpText": "This checks whether e-commerce operational records are protected from unauthorized access, loss, or improper modification.",
+      "expectedEvidence": [
+        "Customer account record controls",
+        "Order record retention settings",
+        "Payment-related record protection notes",
+        "Support ticket retention policy"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-ECOM-03",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-ECOM-03",
+      "question": "Are marketplace, payment gateway, delivery, marketing, and analytics dependencies documented and reviewed?",
+      "helpText": "This verifies whether external e-commerce services are visible and managed as part of operational security.",
+      "expectedEvidence": [
+        "E-commerce dependency register",
+        "Payment gateway review notes",
+        "Delivery provider documentation",
+        "Marketing and analytics platform inventory"
+      ],
+      "severity": "medium",
+      "weight": 1.1,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-EDU-01",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-EDU-01",
+      "question": "Are operational procedures documented for student records, learning platforms, exam systems, attendance, and administrative tools?",
+      "helpText": "Education operations should be documented to protect student information, exam integrity, and learning continuity.",
+      "expectedEvidence": [
+        "Student records procedure",
+        "Learning platform operation notes",
+        "Exam system procedure",
+        "Attendance or administrative system procedure"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-EDU-02",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-EDU-02",
+      "question": "Are student, exam, certificate, attendance, and staff records protected and retained according to operational needs?",
+      "helpText": "This checks whether education records are controlled, protected, and available when needed.",
+      "expectedEvidence": [
+        "Student record retention notes",
+        "Exam record protection procedure",
+        "Certificate record controls",
+        "Staff record access controls"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-EDU-03",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-EDU-03",
+      "question": "Are external learning platforms, video tools, cloud storage, and school management providers documented and operationally reviewed?",
+      "helpText": "This verifies whether external education platforms are visible and monitored as operational dependencies.",
+      "expectedEvidence": [
+        "External learning platform register",
+        "Video tool review records",
+        "Cloud storage usage documentation",
+        "School management provider review notes"
+      ],
+      "severity": "medium",
+      "weight": 1.1,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-TEL-01",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-TEL-01",
+      "question": "Are operational procedures documented for network monitoring, configuration changes, incident handling, provisioning, and customer connectivity?",
+      "helpText": "Telecom operations require controlled procedures to maintain network security, availability, and service continuity.",
+      "expectedEvidence": [
+        "NOC/SOC runbook",
+        "Network configuration change procedure",
+        "Network incident handling procedure",
+        "Provisioning and connectivity process documentation"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-TEL-02",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-TEL-02",
+      "question": "Are network configuration records, monitoring records, incident records, and maintenance records protected and retained?",
+      "helpText": "This checks whether operational evidence for network services is protected and available for review or investigation.",
+      "expectedEvidence": [
+        "Configuration record repository",
+        "Monitoring log retention settings",
+        "Incident record archive",
+        "Maintenance record controls"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-TEL-03",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-TEL-03",
+      "question": "Are upstream providers, data centers, cloud platforms, maintenance teams, and site dependencies documented and operationally reviewed?",
+      "helpText": "This verifies whether critical telecom dependencies are monitored and controlled as part of operations.",
+      "expectedEvidence": [
+        "Critical provider register",
+        "Data center review notes",
+        "Maintenance provider records",
+        "Site dependency documentation"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-SERV-01",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-SERV-01",
+      "question": "Are operational procedures documented for client file handling, project workspaces, contract repositories, communications, and deliverable management?",
+      "helpText": "Professional services firms should control how client information is created, stored, shared, archived, and protected.",
+      "expectedEvidence": [
+        "Client file handling procedure",
+        "Project workspace procedure",
+        "Contract repository controls",
+        "Deliverable management process"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-SERV-02",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-SERV-02",
+      "question": "Are client documents, contracts, project records, and deliverables protected and retained according to business and contractual needs?",
+      "helpText": "This checks whether client-related documentation is protected from unauthorized access, loss, or improper sharing.",
+      "expectedEvidence": [
+        "Client document access controls",
+        "Contract retention rules",
+        "Project record archive",
+        "Deliverable protection notes"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-SERV-03",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-SERV-03",
+      "question": "Are contractor access, remote work, collaboration platforms, and client workspace changes documented and reviewed?",
+      "helpText": "This verifies whether operational changes affecting client information and project access are controlled.",
+      "expectedEvidence": [
+        "Contractor access review records",
+        "Remote work procedure",
+        "Collaboration platform change records",
+        "Client workspace access review"
+      ],
+      "severity": "medium",
+      "weight": 1.1,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-SME-01",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-SME-01",
+      "question": "Has the company documented simple procedures for accounts, backups, devices, email, updates, and incident reporting?",
+      "helpText": "For SMEs, documentation can be simple but should cover the basic operational activities that reduce security risk.",
+      "expectedEvidence": [
+        "Basic IT/security procedure",
+        "Backup procedure",
+        "Account management checklist",
+        "Incident reporting instructions"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-SME-02",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-SME-02",
+      "question": "Are important company documents, account records, backup records, and IT support records protected and easy to retrieve?",
+      "helpText": "This checks whether the company can find and trust the basic evidence needed for security readiness.",
+      "expectedEvidence": [
+        "Document repository",
+        "Backup records",
+        "Account administration records",
+        "IT support ticket or service records"
+      ],
+      "severity": "medium",
+      "weight": 1.1,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    },
+    {
+      "id": "D6-SME-03",
+      "domainId": "D6",
+      "domainName": "Documented Information & Operational Control",
+      "controlCode": "D6-SME-03",
+      "question": "If an external IT provider supports the company, are the services, responsibilities, access, and operational records documented?",
+      "helpText": "External IT support should be documented so responsibilities, access, backups, support, and escalation are not unclear.",
+      "expectedEvidence": [
+        "IT provider service agreement",
+        "Provider responsibility matrix",
+        "Provider access list",
+        "Support records"
+      ],
+      "severity": "high",
+      "weight": 1.1,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    }
+  ],
+  "selectionLogic": {
+    "description": "For each company, return all core questions plus the sector-specific questions matching the company's sector.",
+    "expectedQuestionCountPerCompany": 9,
+    "pseudoCode": "questions = coreQuestions + sectorQuestions.filter(q => q.appliesTo.includes(company.sector))"
+  }
+}

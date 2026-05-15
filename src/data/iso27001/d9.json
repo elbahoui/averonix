@@ -1,0 +1,585 @@
+{
+  "domain": {
+    "id": "D9",
+    "code": "D9",
+    "name": "Technological Controls & Monitoring",
+    "shortName": "Technology",
+    "description": "Assesses whether the organization has technical security controls for endpoint protection, vulnerability management, secure configuration, backups, logging, monitoring, network security, cryptography, secure development, and technical change control.",
+    "frameworkFocus": "ISO/IEC 27001 readiness",
+    "sourceNote": "Questions are independently authored for readiness assessment and do not reproduce ISO standard text.",
+    "defaultSource": "combined",
+    "weight": 1.3
+  },
+  "companySectors": [
+    "saas",
+    "fintech",
+    "healthcare",
+    "ecommerce",
+    "education",
+    "telecom",
+    "professional_services",
+    "general_sme"
+  ],
+  "questionSchema": {
+    "id": "string",
+    "domainId": "D9",
+    "domainName": "Technological Controls & Monitoring",
+    "controlCode": "string",
+    "question": "string",
+    "helpText": "string",
+    "expectedEvidence": ["string"],
+    "severity": "low | medium | high | critical",
+    "weight": "number",
+    "appliesTo": "all | CompanySector[]",
+    "source": "assessment | agent | integration | combined"
+  },
+  "coreQuestions": [
+    {
+      "id": "D9-C01",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-C01",
+      "question": "Are important systems, devices, cloud services, and applications configured according to defined security baselines?",
+      "helpText": "This checks whether systems are hardened and configured consistently instead of relying on default or unmanaged settings.",
+      "expectedEvidence": [
+        "Secure configuration baseline",
+        "Cloud configuration review",
+        "System hardening checklist",
+        "Configuration management records"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "combined"
+    },
+    {
+      "id": "D9-C02",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-C02",
+      "question": "Does your organization manage vulnerabilities through identification, prioritization, remediation, and verification?",
+      "helpText": "This verifies whether vulnerabilities are discovered, risk-ranked, fixed, and tracked to closure across systems and applications.",
+      "expectedEvidence": [
+        "Vulnerability scan results",
+        "Vulnerability management procedure",
+        "Remediation tracker",
+        "Patch verification records"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": "all",
+      "source": "combined"
+    },
+    {
+      "id": "D9-C03",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-C03",
+      "question": "Are backups performed, protected, monitored, and tested for business-critical information and systems?",
+      "helpText": "This checks whether backups exist, are protected from unauthorized changes, and are tested so the organization can recover when needed.",
+      "expectedEvidence": [
+        "Backup policy or procedure",
+        "Backup job reports",
+        "Restore test records",
+        "Backup access control evidence"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": "all",
+      "source": "combined"
+    },
+    {
+      "id": "D9-C04",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-C04",
+      "question": "Are security logs collected, protected, reviewed, and retained for important systems and user activities?",
+      "helpText": "This checks whether logs are available to support monitoring, investigations, accountability, and incident response.",
+      "expectedEvidence": [
+        "Logging configuration evidence",
+        "Log retention settings",
+        "SIEM or monitoring dashboard",
+        "Log review records"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "combined"
+    },
+    {
+      "id": "D9-C05",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-C05",
+      "question": "Are networks, internet-facing services, and remote access paths protected against unauthorized access and exposure?",
+      "helpText": "This verifies whether network boundaries, exposed services, remote access, DNS, email security, and perimeter controls are reviewed and protected.",
+      "expectedEvidence": [
+        "Network diagram",
+        "Firewall or security group rules",
+        "External exposure scan results",
+        "Remote access configuration evidence"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": "all",
+      "source": "combined"
+    },
+    {
+      "id": "D9-C06",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-C06",
+      "question": "Are malware protection, endpoint security, and technical monitoring controls applied to relevant devices and systems?",
+      "helpText": "This checks whether devices and systems are protected against common threats and monitored for suspicious activity.",
+      "expectedEvidence": [
+        "Endpoint protection dashboard",
+        "Anti-malware configuration",
+        "Device compliance reports",
+        "Security monitoring alerts or reports"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": "all",
+      "source": "combined"
+    }
+  ],
+  "sectorQuestions": [
+    {
+      "id": "D9-SAAS-01",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-SAAS-01",
+      "question": "Are the SaaS production environment, cloud infrastructure, databases, APIs, and admin panels continuously monitored for security events?",
+      "helpText": "SaaS platforms should monitor production systems, customer-facing services, administrative access, and unusual activity.",
+      "expectedEvidence": [
+        "Production monitoring dashboard",
+        "Cloud audit logging evidence",
+        "API monitoring records",
+        "Admin activity monitoring"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["saas"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-SAAS-02",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-SAAS-02",
+      "question": "Are secure development controls applied to source code, dependencies, secrets, CI/CD pipelines, and releases?",
+      "helpText": "This checks whether the SaaS product delivery process includes technical controls to reduce software and supply chain risks.",
+      "expectedEvidence": [
+        "SAST or dependency scan results",
+        "Secrets scanning evidence",
+        "CI/CD security controls",
+        "Release security checklist"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["saas"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-SAAS-03",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-SAAS-03",
+      "question": "Are customer data stores encrypted, backed up, access-controlled, and included in recovery testing?",
+      "helpText": "This verifies whether customer information in the SaaS platform is technically protected and recoverable.",
+      "expectedEvidence": [
+        "Database encryption evidence",
+        "Backup and restore test records",
+        "Data store access review",
+        "Key management evidence"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["saas"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-FIN-01",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-FIN-01",
+      "question": "Are payment systems, transaction services, financial APIs, and fraud workflows monitored for suspicious or unauthorized activity?",
+      "helpText": "Fintech systems need strong monitoring because technical anomalies can affect financial integrity and customer trust.",
+      "expectedEvidence": [
+        "Transaction monitoring dashboard",
+        "Financial API logs",
+        "Fraud monitoring evidence",
+        "Alert review records"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["fintech"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-FIN-02",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-FIN-02",
+      "question": "Are transaction records, financial logs, sensitive configuration, and audit trails protected against tampering or unauthorized deletion?",
+      "helpText": "This verifies whether important financial evidence is protected for accountability, investigation, and trust.",
+      "expectedEvidence": [
+        "Immutable or protected logging settings",
+        "Financial audit trail controls",
+        "Log access restrictions",
+        "Retention configuration evidence"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["fintech"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-FIN-03",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-FIN-03",
+      "question": "Are financial platforms and provider integrations protected with encryption, secure APIs, strong authentication, and controlled configuration changes?",
+      "helpText": "This checks whether high-risk financial integrations are technically protected and change-controlled.",
+      "expectedEvidence": [
+        "API security configuration",
+        "Encryption evidence",
+        "MFA evidence for provider portals",
+        "Configuration change records"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["fintech"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-HEALTH-01",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-HEALTH-01",
+      "question": "Are clinical systems, patient record platforms, billing systems, and connected healthcare tools monitored for unauthorized access or suspicious activity?",
+      "helpText": "Healthcare systems should be monitored because unauthorized access can affect patient information, care continuity, and operational trust.",
+      "expectedEvidence": [
+        "Clinical system logs",
+        "Patient record access monitoring",
+        "Healthcare tool monitoring dashboard",
+        "Unauthorized access alert records"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["healthcare"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-HEALTH-02",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-HEALTH-02",
+      "question": "Are patient information repositories encrypted, backed up, access-controlled, and included in recovery testing?",
+      "helpText": "This verifies whether patient-related systems and information can be protected and recovered when needed.",
+      "expectedEvidence": [
+        "Patient data encryption evidence",
+        "Backup job reports",
+        "Restore test evidence",
+        "Access control settings"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["healthcare"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-HEALTH-03",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-HEALTH-03",
+      "question": "Are shared workstations, medical devices, and endpoint systems protected with appropriate technical controls?",
+      "helpText": "This checks whether healthcare devices and shared endpoints are protected against malware, unauthorized access, and misconfiguration.",
+      "expectedEvidence": [
+        "Endpoint protection reports",
+        "Shared workstation controls",
+        "Device security configuration",
+        "Patch or update records"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": ["healthcare"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-ECOM-01",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-ECOM-01",
+      "question": "Are the online store, checkout flow, customer account systems, and admin panels monitored for suspicious or unauthorized activity?",
+      "helpText": "E-commerce monitoring should detect account compromise, admin misuse, checkout problems, suspicious changes, and customer-impacting security events.",
+      "expectedEvidence": [
+        "Store security monitoring",
+        "Admin activity logs",
+        "Checkout monitoring records",
+        "Suspicious activity alerts"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["ecommerce"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-ECOM-02",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-ECOM-02",
+      "question": "Are customer account systems, order data, support data, and payment-related integrations protected with secure configuration and access controls?",
+      "helpText": "This verifies whether key e-commerce systems are technically protected against exposure, unauthorized access, and misconfiguration.",
+      "expectedEvidence": [
+        "Store configuration review",
+        "Customer account access controls",
+        "Payment integration security settings",
+        "Support platform security configuration"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["ecommerce"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-ECOM-03",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-ECOM-03",
+      "question": "Are website security headers, TLS configuration, DNS/email security, and external exposure reviewed for the online store?",
+      "helpText": "This checks observable technical signals that affect customer trust and web security posture.",
+      "expectedEvidence": [
+        "Security headers scan",
+        "TLS scan report",
+        "DNS and email security review",
+        "External exposure scan"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": ["ecommerce"],
+      "source": "agent"
+    },
+    {
+      "id": "D9-EDU-01",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-EDU-01",
+      "question": "Are student information systems, exam platforms, learning tools, and administrative systems monitored for unauthorized access or misuse?",
+      "helpText": "Education systems should be monitored to protect student records, exams, staff information, and learning continuity.",
+      "expectedEvidence": [
+        "Student system logging evidence",
+        "Exam platform monitoring",
+        "Learning tool activity logs",
+        "Unauthorized access alert records"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["education"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-EDU-02",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-EDU-02",
+      "question": "Are student records, exam records, certificates, and administrative information protected through backups, access controls, and secure configuration?",
+      "helpText": "This verifies whether important education records are technically protected and recoverable.",
+      "expectedEvidence": [
+        "Backup reports",
+        "Access control settings",
+        "Secure configuration records",
+        "Restore test evidence"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["education"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-EDU-03",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-EDU-03",
+      "question": "Are external learning platforms, cloud storage, video meeting tools, and school management platforms reviewed for technical security settings?",
+      "helpText": "This checks whether connected education platforms are configured securely and reviewed for access, sharing, and monitoring.",
+      "expectedEvidence": [
+        "External platform security review",
+        "Cloud storage sharing settings",
+        "Video tool security settings",
+        "School management platform review"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-TEL-01",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-TEL-01",
+      "question": "Are routers, switches, firewalls, monitoring platforms, and network management systems monitored for security events and configuration changes?",
+      "helpText": "Telecom and network operators need strong monitoring for infrastructure changes, unauthorized access, service disruption, and suspicious activity.",
+      "expectedEvidence": [
+        "Network monitoring dashboard",
+        "Firewall/router logs",
+        "Configuration change monitoring",
+        "NOC/SOC alert records"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["telecom"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-TEL-02",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-TEL-02",
+      "question": "Are network configurations backed up, version-controlled, protected, and reviewed before or after changes?",
+      "helpText": "This verifies whether infrastructure configuration is protected and recoverable to reduce outage and misconfiguration risks.",
+      "expectedEvidence": [
+        "Network configuration backups",
+        "Configuration version history",
+        "Change review records",
+        "Rollback procedure evidence"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["telecom"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-TEL-03",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-TEL-03",
+      "question": "Are exposed services, management interfaces, remote access paths, and upstream connectivity technically reviewed and protected?",
+      "helpText": "This checks external and internal exposure that could affect network infrastructure and customer connectivity.",
+      "expectedEvidence": [
+        "External exposure scan",
+        "Management interface review",
+        "Remote access configuration evidence",
+        "Upstream connectivity security review"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["telecom"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-SERV-01",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-SERV-01",
+      "question": "Are document repositories, client workspaces, collaboration tools, and remote work platforms technically protected and monitored?",
+      "helpText": "Professional services firms should protect collaboration and document systems that store client information and deliverables.",
+      "expectedEvidence": [
+        "Collaboration platform security settings",
+        "Document repository access logs",
+        "Remote work platform configuration",
+        "Monitoring records"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": ["professional_services"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-SERV-02",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-SERV-02",
+      "question": "Are client files, contracts, project records, and deliverables protected through backups, encryption where appropriate, and access controls?",
+      "helpText": "This verifies whether client information can be protected, recovered, and restricted to authorized project members.",
+      "expectedEvidence": [
+        "Backup evidence",
+        "Access control configuration",
+        "Encryption settings where applicable",
+        "Project workspace security review"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": ["professional_services"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-SERV-03",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-SERV-03",
+      "question": "Are endpoint devices and remote access paths protected before users access client information?",
+      "helpText": "This checks whether remote work devices and access paths are protected with technical controls such as MFA, device security, updates, and endpoint protection.",
+      "expectedEvidence": [
+        "Endpoint protection reports",
+        "MFA evidence",
+        "Device compliance records",
+        "Remote access security settings"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["professional_services"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-SME-01",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-SME-01",
+      "question": "Are business-critical accounts, email, devices, cloud storage, and core software protected with basic technical controls?",
+      "helpText": "For SMEs, basic controls such as MFA, updates, endpoint protection, backups, and secure cloud settings can significantly reduce risk.",
+      "expectedEvidence": [
+        "MFA settings",
+        "Endpoint protection evidence",
+        "Cloud storage security settings",
+        "Software update records"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["general_sme"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-SME-02",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-SME-02",
+      "question": "Are backups configured and tested for the company’s most important systems and files?",
+      "helpText": "This checks whether the company can recover important information if a device fails, ransomware occurs, or data is accidentally deleted.",
+      "expectedEvidence": [
+        "Backup configuration",
+        "Backup job reports",
+        "Restore test record",
+        "Critical file backup list"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["general_sme"],
+      "source": "combined"
+    },
+    {
+      "id": "D9-SME-03",
+      "domainId": "D9",
+      "domainName": "Technological Controls & Monitoring",
+      "controlCode": "D9-SME-03",
+      "question": "Are the company website, email domain, DNS, TLS, and public-facing services checked for basic security exposure?",
+      "helpText": "This checks observable external security signals that can often be improved quickly in a small company environment.",
+      "expectedEvidence": [
+        "Website security scan",
+        "TLS scan report",
+        "DNS/email security check",
+        "External exposure review"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["general_sme"],
+      "source": "agent"
+    }
+  ],
+  "selectionLogic": {
+    "description": "For each company, return all core questions plus the sector-specific questions matching the company's sector.",
+    "expectedQuestionCountPerCompany": 9,
+    "pseudoCode": "questions = coreQuestions + sectorQuestions.filter(q => q.appliesTo.includes(company.sector))"
+  }
+}

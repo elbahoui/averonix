@@ -1,0 +1,5 @@
+project_id = "ticctmdhonovptturrby"
+
+[auth.email.template.confirmation]
+subject = "Confirm your Averonix account"
+content_path = "./supabase/templates/confirm-email.html"

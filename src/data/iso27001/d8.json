@@ -1,0 +1,585 @@
+{
+  "domain": {
+    "id": "D8",
+    "code": "D8",
+    "name": "People, Physical & Access Controls",
+    "shortName": "Access",
+    "description": "Assesses whether the organization controls people-related security risks, physical access, identity lifecycle, user access rights, privileged access, remote work, and secure access to information assets.",
+    "frameworkFocus": "ISO/IEC 27001 readiness",
+    "sourceNote": "Questions are independently authored for readiness assessment and do not reproduce ISO standard text.",
+    "defaultSource": "combined",
+    "weight": 1.1
+  },
+  "companySectors": [
+    "saas",
+    "fintech",
+    "healthcare",
+    "ecommerce",
+    "education",
+    "telecom",
+    "professional_services",
+    "general_sme"
+  ],
+  "questionSchema": {
+    "id": "string",
+    "domainId": "D8",
+    "domainName": "People, Physical & Access Controls",
+    "controlCode": "string",
+    "question": "string",
+    "helpText": "string",
+    "expectedEvidence": ["string"],
+    "severity": "low | medium | high | critical",
+    "weight": "number",
+    "appliesTo": "all | CompanySector[]",
+    "source": "assessment | agent | integration | combined"
+  },
+  "coreQuestions": [
+    {
+      "id": "D8-C01",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-C01",
+      "question": "Does your organization define security responsibilities before, during, and after employment or contractor engagement?",
+      "helpText": "This checks whether security expectations are addressed across onboarding, role changes, confidentiality obligations, and offboarding.",
+      "expectedEvidence": [
+        "Onboarding security checklist",
+        "Employment or contractor security clauses",
+        "Role change procedure",
+        "Offboarding checklist"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D8-C02",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-C02",
+      "question": "Are user identities uniquely assigned, approved, and traceable to real employees, contractors, or service accounts?",
+      "helpText": "This verifies whether accounts are linked to accountable people or approved system purposes, reducing shared or unmanaged accounts.",
+      "expectedEvidence": [
+        "User account inventory",
+        "Identity management records",
+        "Service account register",
+        "Account approval records"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "combined"
+    },
+    {
+      "id": "D8-C03",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-C03",
+      "question": "Are access rights granted, changed, and removed based on approved business need?",
+      "helpText": "This checks whether access follows a controlled lifecycle from request and approval to change and revocation.",
+      "expectedEvidence": [
+        "Access request records",
+        "Access approval workflow",
+        "Joiner-mover-leaver process",
+        "Access removal records"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "combined"
+    },
+    {
+      "id": "D8-C04",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-C04",
+      "question": "Are privileged accounts identified, restricted, monitored, and reviewed regularly?",
+      "helpText": "Privileged access can create high-impact security risk and should be limited, approved, traceable, and reviewed.",
+      "expectedEvidence": [
+        "Privileged account register",
+        "Admin access review records",
+        "Privileged access approval records",
+        "Admin activity monitoring evidence"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": "all",
+      "source": "combined"
+    },
+    {
+      "id": "D8-C05",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-C05",
+      "question": "Are authentication controls such as strong passwords and multi-factor authentication applied to important systems?",
+      "helpText": "This checks whether access to important systems is protected by strong authentication, especially for admin, remote, email, cloud, and business-critical accounts.",
+      "expectedEvidence": [
+        "MFA configuration evidence",
+        "Password policy",
+        "Authentication policy",
+        "Identity provider settings"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": "all",
+      "source": "combined"
+    },
+    {
+      "id": "D8-C06",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-C06",
+      "question": "Are physical areas, devices, and workspaces protected against unauthorized access or loss?",
+      "helpText": "This verifies whether the organization protects offices, equipment, devices, paper records, storage areas, and workspaces according to their risk.",
+      "expectedEvidence": [
+        "Physical access rules",
+        "Visitor log or access badge records",
+        "Device inventory",
+        "Clear desk or secure workspace guidance"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    }
+  ],
+  "sectorQuestions": [
+    {
+      "id": "D8-SAAS-01",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-SAAS-01",
+      "question": "Are production, cloud console, database, and CI/CD access rights restricted to authorized personnel only?",
+      "helpText": "SaaS environments require strict access control for production systems, cloud platforms, databases, secrets, and deployment pipelines.",
+      "expectedEvidence": [
+        "Production access list",
+        "Cloud IAM review",
+        "Database access review",
+        "CI/CD access approval records"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["saas"],
+      "source": "combined"
+    },
+    {
+      "id": "D8-SAAS-02",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-SAAS-02",
+      "question": "Are support and engineering access to customer data controlled, logged, and limited to legitimate support or operational needs?",
+      "helpText": "This checks whether customer data access is restricted and traceable during support, debugging, troubleshooting, or operational work.",
+      "expectedEvidence": [
+        "Customer data access rules",
+        "Support access logs",
+        "Temporary access approval records",
+        "Customer data access review"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["saas"],
+      "source": "combined"
+    },
+    {
+      "id": "D8-SAAS-03",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-SAAS-03",
+      "question": "Are developer devices and remote work environments protected before accessing source code, production tools, or customer systems?",
+      "helpText": "This verifies whether endpoint and remote work practices support secure access to SaaS development and operations environments.",
+      "expectedEvidence": [
+        "Developer device security baseline",
+        "Remote access policy",
+        "Endpoint protection evidence",
+        "Source code access requirements"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["saas"],
+      "source": "combined"
+    },
+    {
+      "id": "D8-FIN-01",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-FIN-01",
+      "question": "Are access rights to payment systems, transaction tools, financial dashboards, and fraud workflows restricted and reviewed?",
+      "helpText": "Fintech access control should protect money movement, financial data, transaction integrity, and fraud investigation processes.",
+      "expectedEvidence": [
+        "Payment system access review",
+        "Financial dashboard access list",
+        "Fraud tool access review",
+        "Transaction system approval records"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["fintech"],
+      "source": "combined"
+    },
+    {
+      "id": "D8-FIN-02",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-FIN-02",
+      "question": "Are duties separated for sensitive financial actions such as approvals, refunds, manual adjustments, and administrative changes?",
+      "helpText": "This checks whether high-risk financial actions require appropriate separation, review, or approval to reduce fraud and misuse.",
+      "expectedEvidence": [
+        "Segregation of duties matrix",
+        "Approval workflow records",
+        "Refund or adjustment approval logs",
+        "Admin change review records"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D8-FIN-03",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-FIN-03",
+      "question": "Are strong authentication and privileged access controls enforced for financial platforms and provider portals?",
+      "helpText": "This verifies whether high-risk financial systems and partner portals are protected by strong authentication and restricted administrator access.",
+      "expectedEvidence": [
+        "MFA evidence for financial platforms",
+        "Provider portal admin list",
+        "Privileged access review",
+        "Authentication configuration evidence"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["fintech"],
+      "source": "combined"
+    },
+    {
+      "id": "D8-HEALTH-01",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-HEALTH-01",
+      "question": "Are access rights to patient records, clinical systems, appointment systems, and billing systems restricted by role?",
+      "helpText": "Healthcare access should reflect clinical, administrative, support, and IT roles so people access only what they need.",
+      "expectedEvidence": [
+        "Role-based access matrix",
+        "Patient record access review",
+        "Clinical system access list",
+        "Billing system access approval records"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["healthcare"],
+      "source": "combined"
+    },
+    {
+      "id": "D8-HEALTH-02",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-HEALTH-02",
+      "question": "Are shared clinical workstations, reception devices, mobile devices, and medical work areas protected against unauthorized access?",
+      "helpText": "This checks whether healthcare environments protect devices and work areas where patient-related information may be visible or accessible.",
+      "expectedEvidence": [
+        "Workstation locking policy",
+        "Reception device controls",
+        "Mobile device security rules",
+        "Clinical area access rules"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D8-HEALTH-03",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-HEALTH-03",
+      "question": "Are external medical partners and temporary personnel granted access only after approval and removed when no longer needed?",
+      "helpText": "This verifies whether access for partners, temporary staff, laboratories, and external doctors is controlled throughout its lifecycle.",
+      "expectedEvidence": [
+        "External user access approvals",
+        "Temporary access register",
+        "Partner access review",
+        "Access removal records"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": ["healthcare"],
+      "source": "combined"
+    },
+    {
+      "id": "D8-ECOM-01",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-ECOM-01",
+      "question": "Are access rights to the online store admin, payment gateway, customer support platform, and order management system restricted and reviewed?",
+      "helpText": "E-commerce access control should protect customer accounts, payment-related operations, support records, orders, and store configuration.",
+      "expectedEvidence": [
+        "Store admin access review",
+        "Payment gateway access list",
+        "Support platform access review",
+        "Order management access records"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["ecommerce"],
+      "source": "combined"
+    },
+    {
+      "id": "D8-ECOM-02",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-ECOM-02",
+      "question": "Are customer support, fulfillment, marketing, and store administration roles separated where needed?",
+      "helpText": "This checks whether users have appropriate access based on role and whether sensitive actions are limited to approved roles.",
+      "expectedEvidence": [
+        "Role-based access matrix",
+        "Store administration role list",
+        "Support access rules",
+        "Fulfillment and marketing access review"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D8-ECOM-03",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-ECOM-03",
+      "question": "Are strong authentication and account protection enabled for store administrators and payment-related accounts?",
+      "helpText": "This verifies whether high-risk e-commerce accounts are protected from takeover and unauthorized administrative changes.",
+      "expectedEvidence": [
+        "MFA evidence for store admin accounts",
+        "Payment account authentication settings",
+        "Admin account review",
+        "Account protection policy"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["ecommerce"],
+      "source": "combined"
+    },
+    {
+      "id": "D8-EDU-01",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-EDU-01",
+      "question": "Are access rights to student records, exam systems, learning platforms, and administrative tools restricted by role?",
+      "helpText": "Education access should reflect staff, teacher, administration, IT, and external provider responsibilities.",
+      "expectedEvidence": [
+        "Education role-based access matrix",
+        "Student system access review",
+        "Exam platform access list",
+        "Admin tool access approvals"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["education"],
+      "source": "combined"
+    },
+    {
+      "id": "D8-EDU-02",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-EDU-02",
+      "question": "Are teacher, student, parent, and external provider accounts created, changed, and removed through a controlled process?",
+      "helpText": "This verifies whether lifecycle control exists for education accounts with different roles and access needs.",
+      "expectedEvidence": [
+        "Account lifecycle procedure",
+        "Student account provisioning records",
+        "Teacher account review",
+        "External provider access removal records"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D8-EDU-03",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-EDU-03",
+      "question": "Are physical areas and devices used for exams, administration, and student records protected against unauthorized access?",
+      "helpText": "This checks whether offices, exam rooms, staff devices, and storage areas are protected according to the information they handle.",
+      "expectedEvidence": [
+        "Exam room access rules",
+        "Administrative office access controls",
+        "Device security rules",
+        "Record storage controls"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D8-TEL-01",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-TEL-01",
+      "question": "Are access rights to routers, switches, firewalls, monitoring platforms, NOC tools, and customer provisioning systems restricted and reviewed?",
+      "helpText": "Telecom access control should protect infrastructure administration, monitoring, and customer service continuity.",
+      "expectedEvidence": [
+        "Network admin access review",
+        "NOC tool access list",
+        "Firewall/router access records",
+        "Provisioning system access approvals"
+      ],
+      "severity": "critical",
+      "weight": 1.5,
+      "appliesTo": ["telecom"],
+      "source": "combined"
+    },
+    {
+      "id": "D8-TEL-02",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-TEL-02",
+      "question": "Are physical access controls applied to network rooms, data center areas, sites, cabinets, and critical equipment?",
+      "helpText": "This checks whether telecom infrastructure areas are protected against unauthorized physical access, tampering, or service disruption.",
+      "expectedEvidence": [
+        "Network room access records",
+        "Site access procedure",
+        "Cabinet or equipment access controls",
+        "Data center access logs"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D8-TEL-03",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-TEL-03",
+      "question": "Are maintenance teams, field technicians, upstream providers, and external support accounts controlled and reviewed?",
+      "helpText": "This verifies whether third-party and operational access to network systems and physical locations is approved, traceable, and removed when no longer needed.",
+      "expectedEvidence": [
+        "Field technician access list",
+        "External support access approval records",
+        "Provider access review",
+        "Maintenance access removal records"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["telecom"],
+      "source": "combined"
+    },
+    {
+      "id": "D8-SERV-01",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-SERV-01",
+      "question": "Are access rights to client workspaces, document repositories, contracts, and collaboration platforms restricted and reviewed?",
+      "helpText": "Professional services firms should control access to client information, contracts, deliverables, and project collaboration spaces.",
+      "expectedEvidence": [
+        "Client workspace access review",
+        "Document repository permissions",
+        "Contract repository access list",
+        "Collaboration platform access records"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": ["professional_services"],
+      "source": "combined"
+    },
+    {
+      "id": "D8-SERV-02",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-SERV-02",
+      "question": "Are consultants, contractors, freelancers, and temporary project members granted client access only after approval and removed after engagement?",
+      "helpText": "This verifies whether external and temporary project access is controlled throughout onboarding, assignment, and offboarding.",
+      "expectedEvidence": [
+        "Contractor access approval records",
+        "Temporary user register",
+        "Project member offboarding records",
+        "Client access removal records"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D8-SERV-03",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-SERV-03",
+      "question": "Are remote work devices and collaboration accounts protected before accessing client information?",
+      "helpText": "This checks whether remote work and collaboration access are protected through device security, authentication, and access rules.",
+      "expectedEvidence": [
+        "Remote work access rules",
+        "Device security requirements",
+        "MFA evidence for collaboration tools",
+        "Client access requirements"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["professional_services"],
+      "source": "combined"
+    },
+    {
+      "id": "D8-SME-01",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-SME-01",
+      "question": "Does the company control who has access to email, business software, cloud storage, devices, and admin accounts?",
+      "helpText": "For SMEs, simple access control over core tools can significantly reduce account compromise and data loss risk.",
+      "expectedEvidence": [
+        "User access list",
+        "Admin account list",
+        "Cloud storage permissions",
+        "Device assignment list"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["general_sme"],
+      "source": "combined"
+    },
+    {
+      "id": "D8-SME-02",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-SME-02",
+      "question": "Are former employees, contractors, and external IT users removed from systems when access is no longer needed?",
+      "helpText": "This checks whether the company has a practical offboarding process for accounts, devices, email, and business tools.",
+      "expectedEvidence": [
+        "Offboarding checklist",
+        "Account removal records",
+        "External IT access review",
+        "Device return records"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    },
+    {
+      "id": "D8-SME-03",
+      "domainId": "D8",
+      "domainName": "People, Physical & Access Controls",
+      "controlCode": "D8-SME-03",
+      "question": "Are important accounts protected with strong authentication and are devices/workspaces protected from unauthorized access?",
+      "helpText": "This verifies whether basic authentication, device protection, and physical workspace controls are in place for a small business context.",
+      "expectedEvidence": [
+        "MFA settings",
+        "Password policy",
+        "Device lock or encryption settings",
+        "Workspace access rules"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["general_sme"],
+      "source": "combined"
+    }
+  ],
+  "selectionLogic": {
+    "description": "For each company, return all core questions plus the sector-specific questions matching the company's sector.",
+    "expectedQuestionCountPerCompany": 9,
+    "pseudoCode": "questions = coreQuestions + sectorQuestions.filter(q => q.appliesTo.includes(company.sector))"
+  }
+}

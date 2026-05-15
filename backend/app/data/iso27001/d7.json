@@ -1,0 +1,586 @@
+{
+  "domain": {
+    "id": "D7",
+    "code": "D7",
+    "name": "Organizational & Supplier Controls",
+    "shortName": "Organization",
+    "description": "Assesses whether the organization has organizational security controls for policies, roles, asset inventory, acceptable use, information classification, supplier relationships, cloud services, compliance review, and operating procedures.",
+    "frameworkFocus": "ISO/IEC 27001 readiness",
+    "sourceNote": "Questions are independently authored for readiness assessment and do not reproduce ISO standard text.",
+    "defaultSource": "combined",
+    "weight": 1.2
+  },
+  "companySectors": [
+    "saas",
+    "fintech",
+    "healthcare",
+    "ecommerce",
+    "education",
+    "telecom",
+    "professional_services",
+    "general_sme"
+  ],
+  "questionSchema": {
+    "id": "string",
+    "domainId": "D7",
+    "domainName": "Organizational & Supplier Controls",
+    "controlCode": "string",
+    "question": "string",
+    "helpText": "string",
+    "expectedEvidence": ["string"],
+    "severity": "low | medium | high | critical",
+    "weight": "number",
+    "appliesTo": "all | CompanySector[]",
+    "source": "assessment | agent | integration | combined"
+  },
+  "coreQuestions": [
+    {
+      "id": "D7-C01",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-C01",
+      "question": "Has your organization defined and communicated information security policies or topic-specific security rules?",
+      "helpText": "This checks whether the organization has practical security rules for areas such as access, acceptable use, information handling, supplier security, cloud use, incident reporting, and secure operations.",
+      "expectedEvidence": [
+        "Information security policy",
+        "Topic-specific security policies",
+        "Policy approval records",
+        "Policy communication or acknowledgement records"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D7-C02",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-C02",
+      "question": "Has your organization maintained an inventory of information assets, systems, applications, cloud services, and owners?",
+      "helpText": "This verifies whether the company knows what assets and services it needs to protect, who owns them, and where they are used.",
+      "expectedEvidence": [
+        "Information asset inventory",
+        "System and application inventory",
+        "Cloud service inventory",
+        "Asset owner list"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "combined"
+    },
+    {
+      "id": "D7-C03",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-C03",
+      "question": "Has your organization defined acceptable use and information handling rules for employees, contractors, and relevant third parties?",
+      "helpText": "This checks whether people have clear rules for using company systems, devices, cloud services, email, collaboration tools, removable media, and sensitive information.",
+      "expectedEvidence": [
+        "Acceptable use policy",
+        "Information handling rules",
+        "Employee acknowledgement records",
+        "Contractor usage guidelines"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D7-C04",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-C04",
+      "question": "Has your organization defined how information is classified, labelled, shared, and transferred?",
+      "helpText": "This checks whether the company has a consistent way to distinguish public, internal, confidential, and sensitive information, and to control how it is shared or transferred.",
+      "expectedEvidence": [
+        "Information classification scheme",
+        "Information labelling procedure",
+        "Information transfer rules",
+        "Secure sharing or transfer records"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    },
+    {
+      "id": "D7-C05",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-C05",
+      "question": "Does your organization manage information security risks related to suppliers, outsourced services, and cloud services?",
+      "helpText": "This verifies whether suppliers and cloud services are identified, reviewed, and managed according to their security impact and access to information.",
+      "expectedEvidence": [
+        "Supplier inventory",
+        "Supplier risk assessment",
+        "Cloud service usage register",
+        "Supplier security requirements or review records"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": "all",
+      "source": "combined"
+    },
+    {
+      "id": "D7-C06",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-C06",
+      "question": "Are compliance with security policies, supplier obligations, and operating procedures reviewed at planned intervals?",
+      "helpText": "This checks whether the organization periodically reviews whether people, systems, suppliers, and processes follow the expected security rules.",
+      "expectedEvidence": [
+        "Security compliance review records",
+        "Supplier review records",
+        "Operating procedure review records",
+        "Corrective action tracker"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": "all",
+      "source": "assessment"
+    }
+  ],
+  "sectorQuestions": [
+    {
+      "id": "D7-SAAS-01",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-SAAS-01",
+      "question": "Does the SaaS company maintain an inventory of production services, repositories, APIs, admin panels, cloud components, and service owners?",
+      "helpText": "SaaS organizations need a clear inventory of product and platform components that support customer-facing services.",
+      "expectedEvidence": [
+        "Production service inventory",
+        "Repository list",
+        "API and admin panel inventory",
+        "Cloud component ownership list"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["saas"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-SAAS-02",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-SAAS-02",
+      "question": "Are SaaS suppliers such as cloud hosting, email, monitoring, support, analytics, and payment tools reviewed for security risk?",
+      "helpText": "This checks whether third-party platforms that support the SaaS product are visible and reviewed according to their security impact.",
+      "expectedEvidence": [
+        "SaaS supplier register",
+        "Cloud provider review",
+        "Monitoring or support provider review",
+        "Supplier security requirement checklist"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": ["saas"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-SAAS-03",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-SAAS-03",
+      "question": "Are information handling rules defined for customer data, support access, logs, exports, and production troubleshooting?",
+      "helpText": "This verifies whether SaaS teams have clear rules for handling customer information during support, debugging, exports, and operations.",
+      "expectedEvidence": [
+        "Customer data handling procedure",
+        "Support access rules",
+        "Log handling guidance",
+        "Production troubleshooting procedure"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["saas"],
+      "source": "assessment"
+    },
+    {
+      "id": "D7-FIN-01",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-FIN-01",
+      "question": "Does the organization maintain an inventory of payment systems, financial applications, transaction services, APIs, and owners?",
+      "helpText": "Fintech organizations need visibility over the assets and services that support financial workflows and transaction integrity.",
+      "expectedEvidence": [
+        "Financial application inventory",
+        "Payment system inventory",
+        "Transaction service list",
+        "Financial system owner list"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["fintech"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-FIN-02",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-FIN-02",
+      "question": "Are banking partners, payment processors, KYC providers, fraud tools, and financial APIs reviewed for security and operational risk?",
+      "helpText": "Financial suppliers can affect trust, availability, transaction integrity, and customer security. They should be reviewed according to their criticality.",
+      "expectedEvidence": [
+        "Financial supplier risk register",
+        "Payment processor review",
+        "KYC provider security review",
+        "Fraud tool review records"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["fintech"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-FIN-03",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-FIN-03",
+      "question": "Are rules defined for handling transaction records, financial logs, fraud cases, customer onboarding records, and exception records?",
+      "helpText": "This checks whether sensitive financial operational information is classified, handled, retained, and shared according to clear rules.",
+      "expectedEvidence": [
+        "Financial information handling rules",
+        "Transaction record handling procedure",
+        "Fraud case handling guidance",
+        "Exception record retention rules"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["fintech"],
+      "source": "assessment"
+    },
+    {
+      "id": "D7-HEALTH-01",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-HEALTH-01",
+      "question": "Does the organization maintain an inventory of clinical systems, patient record platforms, appointment systems, billing tools, and owners?",
+      "helpText": "Healthcare organizations need a clear asset and system inventory for services that support patient care and healthcare operations.",
+      "expectedEvidence": [
+        "Clinical system inventory",
+        "Patient record platform inventory",
+        "Appointment and billing tool list",
+        "Healthcare system owner list"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["healthcare"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-HEALTH-02",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-HEALTH-02",
+      "question": "Are laboratories, pharmacies, insurance partners, external doctors, and healthcare service providers reviewed for information security risk?",
+      "helpText": "Medical partners can create confidentiality, availability, and operational risks and should be reviewed based on access and dependency.",
+      "expectedEvidence": [
+        "Healthcare supplier register",
+        "Medical partner security review",
+        "Data exchange review",
+        "External healthcare service risk assessment"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["healthcare"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-HEALTH-03",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-HEALTH-03",
+      "question": "Are handling rules defined for patient records, clinical documents, test results, appointment information, and billing information?",
+      "helpText": "This checks whether healthcare information is classified and handled according to its sensitivity and operational importance.",
+      "expectedEvidence": [
+        "Patient information handling rules",
+        "Clinical document classification",
+        "Test result sharing procedure",
+        "Billing information handling guidance"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["healthcare"],
+      "source": "assessment"
+    },
+    {
+      "id": "D7-ECOM-01",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-ECOM-01",
+      "question": "Does the organization maintain an inventory of online store components, customer account systems, payment tools, support tools, and owners?",
+      "helpText": "E-commerce organizations need visibility over systems that support customer trust, payments, orders, and support.",
+      "expectedEvidence": [
+        "Online store component inventory",
+        "Customer account system list",
+        "Payment tool inventory",
+        "Support tool owner list"
+      ],
+      "severity": "high",
+      "weight": 1.3,
+      "appliesTo": ["ecommerce"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-ECOM-02",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-ECOM-02",
+      "question": "Are payment gateways, delivery providers, marketplaces, marketing platforms, and analytics providers reviewed for security risk?",
+      "helpText": "Third-party e-commerce platforms can affect customer information, payments, availability, and operational reliability.",
+      "expectedEvidence": [
+        "E-commerce supplier register",
+        "Payment gateway review",
+        "Delivery provider review",
+        "Marketing and analytics provider review"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["ecommerce"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-ECOM-03",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-ECOM-03",
+      "question": "Are handling rules defined for customer accounts, orders, shipping information, refunds, support tickets, and campaign data?",
+      "helpText": "This checks whether e-commerce information is classified, handled, shared, and retained according to business and security needs.",
+      "expectedEvidence": [
+        "Customer information handling rules",
+        "Order and shipping data handling procedure",
+        "Refund record handling notes",
+        "Support ticket handling guidance"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["ecommerce"],
+      "source": "assessment"
+    },
+    {
+      "id": "D7-EDU-01",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-EDU-01",
+      "question": "Does the organization maintain an inventory of student systems, learning platforms, exam tools, communication tools, and owners?",
+      "helpText": "Education organizations need visibility over systems that support learning, exams, administration, and communication.",
+      "expectedEvidence": [
+        "Student system inventory",
+        "Learning platform inventory",
+        "Exam tool list",
+        "System owner list"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-EDU-02",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-EDU-02",
+      "question": "Are external learning platforms, cloud storage, video meeting tools, and school management providers reviewed for security risk?",
+      "helpText": "External education platforms can affect student records, learning continuity, exam integrity, and staff information.",
+      "expectedEvidence": [
+        "Education provider register",
+        "Learning platform security review",
+        "Cloud storage review",
+        "School management provider review"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-EDU-03",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-EDU-03",
+      "question": "Are handling rules defined for student records, exam information, certificates, staff information, and administrative records?",
+      "helpText": "This checks whether education information is classified and handled according to sensitivity and operational need.",
+      "expectedEvidence": [
+        "Student information handling rules",
+        "Exam information handling procedure",
+        "Certificate record handling notes",
+        "Administrative record classification"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["education"],
+      "source": "assessment"
+    },
+    {
+      "id": "D7-TEL-01",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-TEL-01",
+      "question": "Does the organization maintain an inventory of network assets, routers, switches, firewalls, monitoring platforms, operational systems, and owners?",
+      "helpText": "Telecom and network operators need accurate inventories for infrastructure, monitoring, operations, and customer connectivity services.",
+      "expectedEvidence": [
+        "Network asset inventory",
+        "Router, switch, and firewall inventory",
+        "Monitoring platform list",
+        "Infrastructure owner list"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["telecom"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-TEL-02",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-TEL-02",
+      "question": "Are upstream providers, data centers, cloud platforms, site providers, and maintenance teams reviewed for security and service dependency risk?",
+      "helpText": "Telecom services depend on critical providers and infrastructure partners that should be reviewed based on impact and access.",
+      "expectedEvidence": [
+        "Critical provider register",
+        "Upstream provider review",
+        "Data center review",
+        "Maintenance provider risk review"
+      ],
+      "severity": "critical",
+      "weight": 1.4,
+      "appliesTo": ["telecom"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-TEL-03",
+      "domainId": "D7",
+      "name": "Organizational & Supplier Controls",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-TEL-03",
+      "question": "Are handling rules defined for network diagrams, configuration records, customer connectivity information, monitoring data, and incident records?",
+      "helpText": "This checks whether operational telecom information is classified and handled according to sensitivity and service impact.",
+      "expectedEvidence": [
+        "Network information classification",
+        "Configuration record handling procedure",
+        "Monitoring data handling rules",
+        "Incident record handling guidance"
+      ],
+      "severity": "critical",
+      "weight": 1.3,
+      "appliesTo": ["telecom"],
+      "source": "assessment"
+    },
+    {
+      "id": "D7-SERV-01",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-SERV-01",
+      "question": "Does the organization maintain an inventory of client workspaces, document repositories, collaboration tools, contract repositories, and owners?",
+      "helpText": "Professional services organizations need visibility over where client information, contracts, and deliverables are stored and managed.",
+      "expectedEvidence": [
+        "Client workspace inventory",
+        "Document repository list",
+        "Collaboration tool inventory",
+        "Contract repository owner list"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["professional_services"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-SERV-02",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-SERV-02",
+      "question": "Are outsourced consultants, freelancers, collaboration platforms, cloud storage tools, and client-facing service providers reviewed for security risk?",
+      "helpText": "Client information can be exposed through external workers and collaboration platforms, so supplier and platform risk should be reviewed.",
+      "expectedEvidence": [
+        "Contractor and freelancer register",
+        "Collaboration platform review",
+        "Cloud storage provider review",
+        "Client-facing supplier assessment"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["professional_services"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-SERV-03",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-SERV-03",
+      "question": "Are handling rules defined for client files, contracts, project notes, deliverables, and confidential communications?",
+      "helpText": "This checks whether client information is classified, handled, shared, and retained according to confidentiality and contractual expectations.",
+      "expectedEvidence": [
+        "Client information handling rules",
+        "Contract handling procedure",
+        "Deliverable sharing rules",
+        "Confidential communication guidance"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["professional_services"],
+      "source": "assessment"
+    },
+    {
+      "id": "D7-SME-01",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-SME-01",
+      "question": "Does the company maintain a simple inventory of business-critical systems, devices, email accounts, cloud tools, and owners?",
+      "helpText": "For SMEs, a simple inventory can still provide strong visibility over what needs protection and who is responsible.",
+      "expectedEvidence": [
+        "Basic asset inventory",
+        "Business-critical system list",
+        "Device and account list",
+        "Cloud tool owner list"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["general_sme"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-SME-02",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-SME-02",
+      "question": "Are external IT providers, cloud tools, email providers, hosting providers, and business software vendors reviewed at a basic level?",
+      "helpText": "SMEs often depend on external providers, so they should know who supports critical systems and what security expectations apply.",
+      "expectedEvidence": [
+        "Provider list",
+        "External IT provider agreement",
+        "Cloud tool review notes",
+        "Vendor responsibility notes"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["general_sme"],
+      "source": "combined"
+    },
+    {
+      "id": "D7-SME-03",
+      "domainId": "D7",
+      "domainName": "Organizational & Supplier Controls",
+      "controlCode": "D7-SME-03",
+      "question": "Are simple rules defined for acceptable use, passwords, email, file sharing, cloud storage, and company devices?",
+      "helpText": "Small companies need clear and practical rules that employees can follow without unnecessary complexity.",
+      "expectedEvidence": [
+        "Basic acceptable use rules",
+        "Password and email rules",
+        "File sharing guidance",
+        "Device usage rules"
+      ],
+      "severity": "high",
+      "weight": 1.2,
+      "appliesTo": ["general_sme"],
+      "source": "assessment"
+    }
+  ],
+  "selectionLogic": {
+    "description": "For each company, return all core questions plus the sector-specific questions matching the company's sector.",
+    "expectedQuestionCountPerCompany": 9,
+    "pseudoCode": "questions = coreQuestions + sectorQuestions.filter(q => q.appliesTo.includes(company.sector))"
+  }
+}
